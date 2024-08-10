@@ -71,20 +71,19 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
         # 获取类别名称
         class_names = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).thing_classes
 
-        # 将框和分数组合成 SORT 所需的输入格式
-        detections = np.empty((0, 5))
-        for box, score in zip(boxes, scores):
-            detection = np.array([box[0], box[1], box[2], box[3], score])
+        # 将框、分数和类别组合成 SORT 所需的输入格式
+        detections = np.empty((0, 6))  # 包含类别信息的检测框格式
+        for box, score, class_id in zip(boxes, scores, classes):
+            detection = np.array([box[0], box[1], box[2], box[3], score, class_id])
             detections = np.vstack((detections, detection))
 
         # 更新 SORT 跟踪器
         tracks = sort_tracker.update(detections)
 
         # 绘制检测框和跟踪框
-        for i, track in enumerate(tracks):
-            x1, y1, x2, y2, track_id = track[:5]
-            class_id = classes[i]  # 获取当前检测框的类别ID
-            class_name = class_names[class_id]  # 获取类别名称
+        for track in tracks:
+            x1, y1, x2, y2, track_id, class_id = track[:6]
+            class_name = class_names[int(class_id)]  # 获取类别名称
             # 将检测结果写入 result_ini.txt
             result_file.write(
                 f"Frame {frame_count}: ID {int(track_id)}, class_id: {int(class_id)}, Class: {class_name}, Box [{x1}, {y1}, {x2}, {y2}]\n"
@@ -96,14 +95,15 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
 
         # 保存当前帧为图像文件
         frame_filename = os.path.join(output_image_dir, f"frame_{frame_count:04d}.jpg")
-        cv2.imwrite(frame_filename, frame)
+        cv2.imwrite(frame_filename, out_frame)
         frame_count += 1
 
         # 使用 Matplotlib 显示图像（可选）
-        frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        frame_rgb = cv2.cvtColor(out_frame, cv2.COLOR_BGR2RGB)
         plt.imshow(frame_rgb)
         plt.axis("off")  # 隐藏坐标轴
         plt.show()
 
     cap.release()
     out_video.release()
+    cv2.destroyAllWindows()
