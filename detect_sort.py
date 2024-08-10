@@ -29,6 +29,9 @@ predictor = DefaultPredictor(cfg)
 
 # 打开视频文件或相机
 cap = cv2.VideoCapture("/kaggle/input/particle-video/output_video.mp4")
+# Matplotlib figure for displaying multiple images
+fig, ax = plt.subplots(4, 1, figsize=(20, 50))
+indices = [ax[0], ax[1], ax[2], ax[3]]
 # 获取视频的宽度、高度和帧率
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -62,6 +65,12 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
         out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
         # 将绘制后的图像转换回 BGR 格式并写入视频
         out_frame = out.get_image()[:, :, ::-1]
+
+        # 在 Matplotlib 中显示图像
+        indices[frame_count].imshow(out_frame)
+        indices[frame_count].grid(False)
+        frame_count += 1
+
         out_video.write(out_frame)
 
         # 获取检测框
@@ -99,10 +108,10 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
         frame_count += 1
 
         # 使用 Matplotlib 显示图像（可选）
-        frame_rgb = cv2.cvtColor(out_frame, cv2.COLOR_BGR2RGB)
-        plt.imshow(frame_rgb)
-        plt.axis("off")  # 隐藏坐标轴
-        plt.show()
+        # frame_rgb = cv2.cvtColor(out_frame, cv2.COLOR_BGR2RGB)
+        # plt.imshow(frame_rgb)
+        # plt.axis("off")  # 隐藏坐标轴
+        # plt.show()
 
     cap.release()
     out_video.release()
