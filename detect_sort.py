@@ -9,7 +9,7 @@ from detectron2.data import MetadataCatalog
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sort import *
+from sort_backup import *
 
 # 初始化 SORT
 sort_tracker = Sort()
