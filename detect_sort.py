@@ -1,4 +1,4 @@
-import cv2
+import cv2,os
 import torch
 import detectron2
 from detectron2 import model_zoo
@@ -57,12 +57,12 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
         # 使用 Detectron2 进行目标检测
         outputs = predictor(frame)
         # 使用 Visualizer 绘制检测结果
-        v = Visualizer(
-            frame[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2
-        )
-        out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
+        # v = Visualizer(
+        #     frame[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2
+        # )
+        # out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
         # 将绘制后的图像转换回 BGR 格式并写入视频
-        out_frame = out.get_image()[:, :, ::-1]
+        # frame = out.get_image()[:, :, ::-1]
 
         # 获取检测框
         boxes = outputs["instances"].pred_boxes.tensor.cpu().numpy()
@@ -93,19 +93,12 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
                 f"Frame {frame_count}: ID {int(track_id)}, Class: {class_name}, Box [{x1}, {y1}, {x2}, {y2}]\n",
             )
             # 在图像上绘制跟踪ID
-            cv2.putText(
-                out_frame,
-                f"ID: {int(track_id)}",
-                (int(x1), int(y1 - 10)),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.9,
-                (255, 255, 255),
-                2,
-            )
+            cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)
+            cv2.putText(frame, f"ID: {int(track_id)}", (int(x1), int(y1 - 10)), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 255, 255), 2)
 
         # 保存当前帧为图像文件
         frame_filename = os.path.join(output_image_dir, f"frame_{frame_count:04d}.jpg")
-        cv2.imwrite(frame_filename, out_frame)
+        cv2.imwrite(frame_filename, frame)
         frame_count += 1
     cap.release()
     out_video.release()
