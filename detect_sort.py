@@ -9,7 +9,7 @@ from detectron2.data import MetadataCatalog
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sort_backup import *
+from sort import *
 
 # 初始化 SORT
 sort_tracker = Sort()
@@ -29,9 +29,7 @@ predictor = DefaultPredictor(cfg)
 
 # 打开视频文件或相机
 cap = cv2.VideoCapture("/kaggle/input/particle-video/output_video.mp4")
-# Matplotlib figure for displaying multiple images
-fig, ax = plt.subplots(4, 1, figsize=(20, 50))
-indices = [ax[0], ax[1], ax[2], ax[3]]
+
 # 获取视频的宽度、高度和帧率
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -66,13 +64,6 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
         # 将绘制后的图像转换回 BGR 格式并写入视频
         out_frame = out.get_image()[:, :, ::-1]
 
-        # 在 Matplotlib 中显示图像
-        indices[frame_count].imshow(out_frame)
-        indices[frame_count].grid(False)
-        frame_count += 1
-
-        out_video.write(out_frame)
-
         # 获取检测框
         boxes = outputs["instances"].pred_boxes.tensor.cpu().numpy()
         scores = outputs["instances"].scores.cpu().numpy()
@@ -101,18 +92,20 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
                 "predict result:",
                 f"Frame {frame_count}: ID {int(track_id)}, Class: {class_name}, Box [{x1}, {y1}, {x2}, {y2}]\n",
             )
+            # 在图像上绘制跟踪ID
+            cv2.putText(
+                out_frame,
+                f"ID: {int(track_id)}",
+                (int(x1), int(y1 - 10)),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.9,
+                (255, 255, 255),
+                2,
+            )
 
         # 保存当前帧为图像文件
         frame_filename = os.path.join(output_image_dir, f"frame_{frame_count:04d}.jpg")
         cv2.imwrite(frame_filename, out_frame)
         frame_count += 1
-
-        # 使用 Matplotlib 显示图像（可选）
-        # frame_rgb = cv2.cvtColor(out_frame, cv2.COLOR_BGR2RGB)
-        # plt.imshow(frame_rgb)
-        # plt.axis("off")  # 隐藏坐标轴
-        # plt.show()
-
     cap.release()
     out_video.release()
-    cv2.destroyAllWindows()
