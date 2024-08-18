@@ -145,7 +145,6 @@ class KalmanBoxTracker(object):
 
         # keep yolov5 detected class information
         self.detclass = bbox[5]
-
         # If we want to store bbox
         self.bbox_history = [bbox]
 
@@ -159,6 +158,7 @@ class KalmanBoxTracker(object):
         self.hit_streak += 1
         self.kf.update(convert_bbox_to_z(bbox))
         self.detclass = bbox[5]
+        # print('detclass:', self.detclass)
         CX = (bbox[0] + bbox[2]) // 2
         CY = (bbox[1] + bbox[3]) // 2
         self.centroidarr.append((CX, CY))

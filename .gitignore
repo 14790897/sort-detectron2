@@ -1,0 +1,4 @@
+*.pyc
+coco-data
+result_ini.txt
+*.avi
