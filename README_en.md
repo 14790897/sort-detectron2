@@ -4,7 +4,7 @@ This repository contains a Python script that integrates Detectron2 for object d
 
 ## Kaggle Notebook
 
-[![Kaggle](https://img.shields.io/badge/Kaggle-Notebooks-blue?style=flat&logo=kaggle)](https://www.kaggle.com/your-username/your-notebook)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Notebooks-blue?style=flat&logo=kaggle)](https://www.kaggle.com/code/liuweiq/sort-detectron2)
 
 ## Prerequisites
 
