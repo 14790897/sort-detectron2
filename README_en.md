@@ -2,6 +2,10 @@
 
 This repository contains a Python script that integrates Detectron2 for object detection with the SORT algorithm for object tracking. The code reads a video file, processes each frame to detect objects, and tracks the movement of these objects across frames, saving the results into a video file with annotated object tracks.
 
+## Kaggle Notebook
+
+[![Kaggle](https://img.shields.io/badge/Kaggle-Notebooks-blue?style=flat&logo=kaggle)](https://www.kaggle.com/your-username/your-notebook)
+
 ## Prerequisites
 
 Before running the script, ensure you have the following installed:
@@ -52,7 +56,7 @@ python main.py
 - **Input Video:** The script reads from `./output_video.mp4` by default. Modify the path to process a different video file.
 - **Output:** The script outputs an annotated video `output_video.avi` and saves results in `result_ini.txt` within the `result_ini` directory.
 - **Frame Limitation:** The script processes the entire video by default. Uncomment and modify the `while` loop condition to limit processing to the first 20 frames.
-  
+
 ### Output Files
 
 - **Annotated Video:** The script will generate an output video file `output_video.avi` with detected objects and their tracking IDs.
