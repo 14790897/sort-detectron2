@@ -126,7 +126,6 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
 
         # 绘制检测框和跟踪框
         for track in tracks:
-            # print('track:', track)
             x1, y1, x2, y2 = track[:4]  # 提取边界框坐标
             class_id = track[4]  # 提取类别 ID
             track_id = track[8]  # 提取跟踪 ID
