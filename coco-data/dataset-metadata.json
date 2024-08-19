@@ -1,0 +1,37 @@
+{
+  "id": "liuweiq/coco-data",
+  "id_no": 5367510,
+  "datasetSlugNullable": "coco-data",
+  "ownerUserNullable": "liuweiq",
+  "usabilityRatingNullable": 0.25,
+  "titleNullable": "coco_data",
+  "subtitleNullable": "",
+  "descriptionNullable": "",
+  "datasetId": 5367510,
+  "datasetSlug": "coco-data",
+  "hasDatasetSlug": true,
+  "ownerUser": "liuweiq",
+  "hasOwnerUser": true,
+  "usabilityRating": 0.25,
+  "hasUsabilityRating": true,
+  "totalViews": 1,
+  "totalVotes": 0,
+  "totalDownloads": 0,
+  "title": "coco_data",
+  "hasTitle": true,
+  "subtitle": "",
+  "hasSubtitle": true,
+  "description": "",
+  "hasDescription": true,
+  "isPrivate": false,
+  "keywords": [],
+  "licenses": [
+    {
+      "nameNullable": "MIT",
+      "name": "MIT",
+      "hasName": true
+    }
+  ],
+  "collaborators": [],
+  "data": []
+}

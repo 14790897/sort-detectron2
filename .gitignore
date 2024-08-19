@@ -1,5 +1,5 @@
 *.pyc
-coco-data
+# coco-data
 result_ini.txt
 *.avi
 model_final.pth
