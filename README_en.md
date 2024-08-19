@@ -34,6 +34,8 @@ Before running the script, ensure you have the following installed:
 3. **Download pre-trained weights for Detectron2:**
 
    Ensure you have the `model_final.pth` file in the working directory or modify the path in the script to point to your pre-trained model.
+   my pth address:[kaggle download](https://storage.googleapis.com/kagglesdsdata/models/77237/92130/model_final.pth?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20240819%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240819T082352Z&X-Goog-Expires=259200&X-Goog-SignedHeaders=host&X-Goog-Signature=3ad5df116a3c4ad30f12b34562b598b0f723edbf4fc3df2c96806e63ed99944e676501f9f155ea4dbe972490dca9067e934dd5bc2c691f86dc3f5f31ef2059b1c88fa0f9c4dc55b03893f8a6c93a94f4a0379a4356deae08107ec1f6f8a1946bdd6958dcb3297fa10a9aa5d5be030cc4aca2b4c5237ea56bf2242a0893df5b0f24089352e0bd96def2d7be73d3cf47a572581b70fb2c48c01defd9ad5b83f4ca725af701183f4dd09549b52f8475b7538640bdf9cffb44dfd61691cc64d7261e71e6fd907955f99a8e43a1f739418f87034bfd8a6c7ba9e3224c40ef864f51c63bba8adf2aeb85f48ebb8f2d4d9329bdffdf6edd942e21d2f39fadb5d82ba9f7)
+   [kaggle model page](https://www.kaggle.com/models/liuweiq/detectron2_coincide_separation)
 
 ## Usage
 
