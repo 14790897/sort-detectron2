@@ -133,9 +133,16 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
             if class_id >= 0:
                 class_name = class_names[int(class_id)][0]  # 获取类别名称 首字母
                 print("int(class_id):", int(class_id), "class_name:", class_name)
-                # 将检测结果写入 result_ini.txt
+                # 将检测结果写入 result_ini.txt ，格式为：track_id class_id x y frame_count
                 result_file.write(
-                    f"Frame {frame_count}: ID {int(track_id)}, class_id: {int(class_id)}, Class: {class_name}, Box [{x1}, {y1}, {x2}, {y2}]\n"
+                    "%i %i %i %i %i\n"
+                    % (
+                        int(track_id),
+                        int(class_id),
+                        int((x1 + x2) / 2),
+                        int((y1 + y2) / 2),
+                        frame_count,
+                    )
                 )
                 print(
                     "predict result:",
