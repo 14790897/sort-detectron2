@@ -131,7 +131,7 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
             class_id = track[4]  # 提取类别 ID
             track_id = track[8]  # 提取跟踪 ID
             if class_id >= 0:
-                class_name = class_names[int(class_id)]  # 获取类别名称
+                class_name = class_names[int(class_id)][0]  # 获取类别名称 首字母
                 print("int(class_id):", int(class_id), "class_name:", class_name)
                 # 将检测结果写入 result_ini.txt
                 result_file.write(
@@ -145,7 +145,7 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
                 # cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)
                 cv2.putText(
                     frame,
-                    f"ID {int(track_id)} class {class_name}",
+                    f" {int(track_id)}  {class_name}",
                     (int(x1), int(y1 - 10)),
                     cv2.FONT_HERSHEY_SIMPLEX,
                     0.9,
