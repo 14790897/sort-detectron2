@@ -1,0 +1,705 @@
+﻿[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,黑体,16,&H00aaaaaa,&H00000000,&H00000000,&H00000000,0,0,0,0,100.00,100.00,0.00,0.00,1,1.00,1.00,2,5,5,5,134
+Style: Eng,Microsoft YaHei,12,&H00aaaaaa,&H000000ff,&H00000000,&H00000000,0,0,0,0,100.00,100.00,0.00,0.00,1,1.00,1.00,2,5,5,5,134
+
+[Events]
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:01:14.77,0:01:16.20,Default,,0000,0000,0000,,老师好\N{\rEng}Good morning, sir!
+Dialogue: 0,0:01:35.59,0:01:37.35,Default,,0000,0000,0000,,周小迪！\N{\rEng}Dicky chow!
+Dialogue: 0,0:01:39.42,0:01:42.22,Default,,0000,0000,0000,,你看  你为什么那么脏\N{\rEng}Just look at yourself. You're covered in dirt.
+Dialogue: 0,0:01:42.43,0:01:44.59,Default,,0000,0000,0000,,-刚才我  -不要走过来\N{\rEng}- I just... - Don't move!
+Dialogue: 0,0:01:45.33,0:01:47.36,Default,,0000,0000,0000,,你老是找藉口\N{\rEng}And don't give me the usual routine.
+Dialogue: 0,0:01:48.23,0:01:50.29,Default,,0000,0000,0000,,你为什么不能给我干净一点？\N{\rEng}Why are you always so untidy?
+Dialogue: 0,0:01:50.57,0:01:52.04,Default,,0000,0000,0000,,曹主任  什么事？\N{\rEng}What's the matter, Mr. cao?
+Dialogue: 0,0:01:52.24,0:01:53.20,Default,,0000,0000,0000,,你说！\N{\rEng}Explain yourself!
+Dialogue: 0,0:01:53.50,0:01:55.47,Default,,0000,0000,0000,,我来跟他说  好吗？\N{\rEng}I et me talk to him.
+Dialogue: 0,0:01:58.51,0:02:01.44,Default,,0000,0000,0000,,小迪  你怎么弄得这么脏？\N{\rEng}Where did the dirt come from, dicky?
+Dialogue: 0,0:02:01.98,0:02:04.81,Default,,0000,0000,0000,,刚才上学的时候 不小心摔了一跤\N{\rEng}Well, on my way to school, I slipped and fell over.
+Dialogue: 0,0:02:05.32,0:02:07.88,Default,,0000,0000,0000,,那为什么没有爸爸妈妈来送你呢？\N{\rEng}Don't your mom or dad bring you to school?
+Dialogue: 0,0:02:08.19,0:02:11.12,Default,,0000,0000,0000,,妈妈很早就去世了  爸爸很忙\N{\rEng}Mom died a long time ago and dad's very busy.
+Dialogue: 0,0:02:11.92,0:02:13.62,Default,,0000,0000,0000,,那你爸爸是做什么工作的？\N{\rEng}What does your dad do?
+Dialogue: 0,0:02:13.86,0:02:15.12,Default,,0000,0000,0000,,做民工\N{\rEng}He's a coolie.
+Dialogue: 0,0:02:23.03,0:02:26.30,Default,,0000,0000,0000,,那找个时间  袁老师和你爸爸见个面怎么样呢？\N{\rEng}I'd like to meet him one day. Would that be possible?
+Dialogue: 0,0:02:26.87,0:02:28.84,Default,,0000,0000,0000,,我看他真的没时间\N{\rEng}I don't think he has the time.
+Dialogue: 0,0:02:29.94,0:02:33.40,Default,,0000,0000,0000,,好吧  那等他有时间的时候你就告诉我\N{\rEng}When he's available, then. Will you let me know?
+Dialogue: 0,0:02:33.61,0:02:35.67,Default,,0000,0000,0000,,把它拿着  快上课了  擦干净吧\N{\rEng}Go clean up before class starts.
+Dialogue: 0,0:02:35.88,0:02:37.68,Default,,0000,0000,0000,,谢谢袁老师\N{\rEng}Thanks, miss yuen.
+Dialogue: 0,0:02:42.85,0:02:45.52,Default,,0000,0000,0000,,我的志愿是想当大明星\N{\rEng}I want to be a superstar.
+Dialogue: 0,0:02:45.72,0:02:48.28,Default,,0000,0000,0000,,-像谁？  -妮可基曼\N{\rEng}Like who? Nicole Kidman.
+Dialogue: 0,0:02:48.56,0:02:51.65,Default,,0000,0000,0000,,妮可基曼片酬两千万美金\N{\rEng}She gets $20 million for a movie.
+Dialogue: 0,0:02:51.86,0:02:53.92,Default,,0000,0000,0000,,你的志愿也是我的志愿\N{\rEng}I wouldn't mind being her either.
+Dialogue: 0,0:02:54.70,0:02:56.46,Default,,0000,0000,0000,,我要做个大企业家\N{\rEng}I want to be an entrepreneur.
+Dialogue: 0,0:02:57.00,0:02:58.03,Default,,0000,0000,0000,,哪一方面？\N{\rEng}What kind of business?
+Dialogue: 0,0:02:58.24,0:03:01.50,Default,,0000,0000,0000,,哪一方面都可以  但是一定要大\N{\rEng}Any kind, as long as it's really big.
+Dialogue: 0,0:03:01.71,0:03:03.97,Default,,0000,0000,0000,,大吃小  小被吃\N{\rEng}Big business always pays out.
+Dialogue: 0,0:03:04.88,0:03:06.37,Default,,0000,0000,0000,,有何不可呢？\N{\rEng}Why not?
+Dialogue: 0,0:03:14.52,0:03:16.61,Default,,0000,0000,0000,,我要做一个穷人\N{\rEng}I want to be a poor person.
+Dialogue: 0,0:03:21.69,0:03:22.89,Default,,0000,0000,0000,,别笑了\N{\rEng}Stop!
+Dialogue: 0,0:03:24.50,0:03:27.52,Default,,0000,0000,0000,,因为爸爸说只要有骨气\N{\rEng}My dad says if you have integrity...
+Dialogue: 0,0:03:27.77,0:03:30.89,Default,,0000,0000,0000,,不吹牛  不打架  努力读书\N{\rEng}Don't lie, don't fight, and study really hard...
+Dialogue: 0,0:03:31.10,0:03:34.20,Default,,0000,0000,0000,,就算穷  到哪里都会受到尊敬的\N{\rEng}Then people will respect you even if you're poor.
+Dialogue: 0,0:03:50.29,0:03:51.72,Default,,0000,0000,0000,,别碰\N{\rEng}Don't
+Dialogue: 0,0:03:54.63,0:03:55.99,Default,,0000,0000,0000,,不要走过来！\N{\rEng}don't come over here!
+Dialogue: 0,0:03:58.30,0:03:59.49,Default,,0000,0000,0000,,放下！\N{\rEng}Put it down!
+Dialogue: 0,0:04:02.93,0:04:04.09,Default,,0000,0000,0000,,回去！\N{\rEng}Go back to your seat!
+Dialogue: 0,0:05:28.72,0:05:34.02,Default,,0000,0000,0000,,这个超级玩具狗的名字叫“长江一号”\N{\rEng}The name of this amazing dog is cj1.
+Dialogue: 0,0:05:34.46,0:05:39.19,Default,,0000,0000,0000,,是美国  法国  德国的科学家\N{\rEng}It was developed jointly by U.S., French and German scientists.
+Dialogue: 0,0:05:39.40,0:05:41.92,Default,,0000,0000,0000,,共同研究出来的\N{\rEng}Imagine! Jointly developed!
+Dialogue: 0,0:05:42.63,0:05:44.79,Default,,0000,0000,0000,,-你想玩吗？  -想\N{\rEng}- Do you want a go? - Yes, please.
+Dialogue: 0,0:05:45.00,0:05:46.87,Default,,0000,0000,0000,,滚开啦！\N{\rEng}Back off, loser!
+Dialogue: 0,0:05:47.54,0:05:51.47,Default,,0000,0000,0000,,这个玩具狗在世界上只有两个\N{\rEng}There are only two in the world.
+Dialogue: 0,0:05:51.68,0:05:55.84,Default,,0000,0000,0000,,另外一个在美国总统女儿的手上\N{\rEng}The U.S. president's daughter has the other one.
+Dialogue: 0,0:05:57.08,0:05:58.95,Default,,0000,0000,0000,,-你在干嘛？  -我在吃面\N{\rEng}- What are you doing? - Eating noodles.
+Dialogue: 0,0:05:59.15,0:06:01.62,Default,,0000,0000,0000,,你给我站出来\N{\rEng}Stand up!
+Dialogue: 0,0:06:02.15,0:06:06.95,Default,,0000,0000,0000,,你看你矮成这个样子  吃什么都没有用了\N{\rEng}No matter how much you eat, you are doomed to be a dwarf.
+Dialogue: 0,0:06:07.16,0:06:08.79,Default,,0000,0000,0000,,走开啦！\N{\rEng}Now get lost!
+Dialogue: 0,0:06:08.99,0:06:13.66,Default,,0000,0000,0000,,为什么现在的学生的素质  是越来越低\N{\rEng}The quality of the students in this place gets worse every day.
+Dialogue: 0,0:06:13.86,0:06:18.06,Default,,0000,0000,0000,,你看看  又来个奇形怪状的在这里\N{\rEng}What have we here, another alien?
+Dialogue: 0,0:06:19.07,0:06:21.06,Default,,0000,0000,0000,,-你在干嘛？  -我在吃饭\N{\rEng}- What are you doing? - Eating rice.
+Dialogue: 0,0:06:21.27,0:06:24.37,Default,,0000,0000,0000,,你才几岁就长得那么大块\N{\rEng}You're just like a huge tub of lard.
+Dialogue: 0,0:06:24.58,0:06:26.87,Default,,0000,0000,0000,,有病又不去看医生\N{\rEng}Maybe you should go see the doctor.
+Dialogue: 0,0:06:27.08,0:06:30.67,Default,,0000,0000,0000,,你还吃那么多  吓死人了！\N{\rEng}You eat so much. It's horrible!
+Dialogue: 0,0:06:30.88,0:06:35.25,Default,,0000,0000,0000,,你们叫警察把这个怪物给枪毙\N{\rEng}Someone call the police to shoot this monster!
+Dialogue: 0,0:06:35.45,0:06:38.22,Default,,0000,0000,0000,,吃死你  大怪物！\N{\rEng}Fat to death! Giant monster!
+Dialogue: 0,0:06:38.42,0:06:39.48,Default,,0000,0000,0000,,你们干嘛\N{\rEng}What are you doing?
+Dialogue: 0,0:06:48.13,0:06:50.62,Default,,0000,0000,0000,,你们欺负女孩子  不是英雄\N{\rEng}Bullies! Heroes don't hit women.
+Dialogue: 0,0:06:50.84,0:06:53.17,Default,,0000,0000,0000,,你干嘛又跟过来？\N{\rEng}Not you again!
+Dialogue: 0,0:06:53.37,0:06:54.77,Default,,0000,0000,0000,,别理他\N{\rEng}Ignore him.
+Dialogue: 0,0:06:55.31,0:06:59.07,Default,,0000,0000,0000,,走了  穷鬼  我们不想跟你玩\N{\rEng}Go away, poor boy. We don't want you around.
+Dialogue: 0,0:06:59.48,0:07:01.45,Default,,0000,0000,0000,,滚蛋吧  死穷鬼\N{\rEng}Go away, poor boy.
+Dialogue: 0,0:07:17.13,0:07:18.43,Default,,0000,0000,0000,,你好\N{\rEng}Hi
+Dialogue: 0,0:07:18.63,0:07:19.96,Default,,0000,0000,0000,,你好\N{\rEng}Hi
+Dialogue: 0,0:07:22.60,0:07:24.12,Default,,0000,0000,0000,,你也被罚站了吗？\N{\rEng}You've been sent off the field too?”
+Dialogue: 0,0:07:24.50,0:07:26.20,Default,,0000,0000,0000,,是的\N{\rEng}Yes
+Dialogue: 0,0:07:27.91,0:07:29.90,Default,,0000,0000,0000,,你也没带运动鞋？\N{\rEng}did you forget your sneakers?
+Dialogue: 0,0:07:30.31,0:07:33.71,Default,,0000,0000,0000,,其实我带了  只是我故意不换而已\N{\rEng}I brought them, but I didn't wear them on purpose.
+Dialogue: 0,0:07:33.91,0:07:35.14,Default,,0000,0000,0000,,为什么？\N{\rEng}Why?
+Dialogue: 0,0:07:35.51,0:07:37.24,Default,,0000,0000,0000,,想陪你一起罚站\N{\rEng}Because I wanted to be with you.
+Dialogue: 0,0:07:46.36,0:07:48.72,Default,,0000,0000,0000,,你的鞋都是破的吗？\N{\rEng}Are all your shoes like that?
+Dialogue: 0,0:07:48.96,0:07:51.34,Default,,0000,0000,0000,,对  我所有的鞋都是破的\N{\rEng}Yes, they are.
+Dialogue: 0,0:07:51.34,0:07:53.73,Default,,0000,0000,0000,,都是我爸爸从外面捡回来的\N{\rEng}My dad gets them from the dump.
+Dialogue: 0,0:07:53.96,0:07:55.90,Default,,0000,0000,0000,,你爸爸可对你真好的呀\N{\rEng}Your dad's so nice.
+Dialogue: 0,0:07:56.10,0:07:57.50,Default,,0000,0000,0000,,是的\N{\rEng}He is, actually.
+Dialogue: 0,0:07:58.54,0:08:01.99,Default,,0000,0000,0000,,不过  我还是想要一双新的运动鞋\N{\rEng}But I so much want a new pair...
+Dialogue: 0,0:08:02.21,0:08:04.33,Default,,0000,0000,0000,,因为我很喜欢上体育课\N{\rEng}Because I really love sports.
+Dialogue: 0,0:08:05.38,0:08:07.71,Default,,0000,0000,0000,,我不想你有新的运动鞋\N{\rEng}I'd like you to keep the old ones.
+Dialogue: 0,0:08:07.91,0:08:09.11,Default,,0000,0000,0000,,为什么？\N{\rEng}Why?
+Dialogue: 0,0:08:09.65,0:08:12.45,Default,,0000,0000,0000,,我想永远陪着你罚站\N{\rEng}Then we'd be punished together, forever.
+Dialogue: 0,0:08:32.74,0:08:34.14,Default,,0000,0000,0000,,把板子接上\N{\rEng}Get that panel up there.
+Dialogue: 0,0:08:34.41,0:08:35.46,Default,,0000,0000,0000,,快去\N{\rEng}Quickly!
+Dialogue: 0,0:08:36.64,0:08:38.37,Default,,0000,0000,0000,,你  动作犀利一点\N{\rEng}You. Hurry up.
+Dialogue: 0,0:08:51.52,0:08:54.49,Default,,0000,0000,0000,,你就回去歇着吧  这里不用你了\N{\rEng}You're no longer needed. Go home.
+Dialogue: 0,0:08:55.16,0:08:56.49,Default,,0000,0000,0000,,老板\N{\rEng}Hey, boss?
+Dialogue: 0,0:08:57.39,0:09:01.23,Default,,0000,0000,0000,,因为这几天好热  我儿子他都睡不好\N{\rEng}With it being so hot right now, my son can't sleep.
+Dialogue: 0,0:09:01.43,0:09:03.16,Default,,0000,0000,0000,,我要钱给他买个风扇  可不可以\N{\rEng}I need to buy an electric fan.
+Dialogue: 0,0:09:03.37,0:09:04.66,Default,,0000,0000,0000,,让我盖下去？\N{\rEng}Can't you keep me on?
+Dialogue: 0,0:09:04.87,0:09:07.86,Default,,0000,0000,0000,,你有钱不如先还给我吧  还想买风扇\N{\rEng}You should be paying me back instead.
+Dialogue: 0,0:09:08.07,0:09:11.77,Default,,0000,0000,0000,,你老婆的医药费  殓葬费  都是我垫的\N{\rEng}I paid all the bills when your wife got sick and died.
+Dialogue: 0,0:09:11.98,0:09:14.60,Default,,0000,0000,0000,,看你那副德行  一辈子都还不完了\N{\rEng}Look at yourself. You'll die before your debts are repaid.
+Dialogue: 0,0:09:14.81,0:09:17.78,Default,,0000,0000,0000,,还要自己不吃饭  供儿子读贵族学校\N{\rEng}You're starving yourself so your son can go to that fancy school.
+Dialogue: 0,0:09:17.98,0:09:21.54,Default,,0000,0000,0000,,我儿子也只是读普通学校  有什么分别？\N{\rEng}If my son can go to public school, why can't yours?
+Dialogue: 0,0:09:21.75,0:09:24.74,Default,,0000,0000,0000,,也不是  不过是想让他读好一点\N{\rEng}Well, I want him to have opportunities.
+Dialogue: 0,0:09:24.96,0:09:26.72,Default,,0000,0000,0000,,不想他将来跟我一样嘛\N{\rEng}I don't want him to end up like me.
+Dialogue: 0,0:09:26.92,0:09:29.09,Default,,0000,0000,0000,,那你也要有能力才行嘛\N{\rEng}But you have to have capability.
+Dialogue: 0,0:09:29.29,0:09:30.62,Default,,0000,0000,0000,,我觉得他能力很强\N{\rEng}He's highly capable.
+Dialogue: 0,0:09:30.83,0:09:32.26,Default,,0000,0000,0000,,我说的是你\N{\rEng}I'm talking about you, not him.
+Dialogue: 0,0:09:33.13,0:09:36.10,Default,,0000,0000,0000,,你只是个散工  凭什么？\N{\rEng}All you have is a casual job with no prospects.
+Dialogue: 0,0:09:36.30,0:09:37.60,Default,,0000,0000,0000,,你怎么顶啊？\N{\rEng}How are you going to cope?
+Dialogue: 0,0:09:38.24,0:09:40.23,Default,,0000,0000,0000,,-顶得了  -你顶不了\N{\rEng}- I can manage. - You can't manage!
+Dialogue: 0,0:09:40.74,0:09:43.54,Default,,0000,0000,0000,,-顶得了  -你顶不了！\N{\rEng}I can. You can't!
+Dialogue: 0,0:09:45.31,0:09:46.97,Default,,0000,0000,0000,,顶得了\N{\rEng}I can manage.
+Dialogue: 0,0:09:49.35,0:09:50.64,Default,,0000,0000,0000,,去B座凿水泥地\N{\rEng}Very well. Block b. Foundations.
+Dialogue: 0,0:09:51.08,0:09:52.28,Default,,0000,0000,0000,,谢谢老板\N{\rEng}Thanks.
+Dialogue: 0,0:09:52.65,0:09:55.62,Default,,0000,0000,0000,,你想死他都不让你死  贱骨头\N{\rEng}If you want to die, I can't stop you. Shame on you.
+Dialogue: 0,0:10:50.14,0:10:51.20,Default,,0000,0000,0000,,你回来了\N{\rEng}You're back.
+Dialogue: 0,0:10:51.64,0:10:53.17,Default,,0000,0000,0000,,快点做饭  胜子饿死了\N{\rEng}Can we have dinner? I'm starving.
+Dialogue: 0,0:10:53.38,0:10:54.61,Default,,0000,0000,0000,,你退后\N{\rEng}Just step back a bit.
+Dialogue: 0,0:10:59.08,0:11:01.11,Default,,0000,0000,0000,,-干嘛？  -转过去\N{\rEng}What's going on? Turn round.
+Dialogue: 0,0:11:12.26,0:11:13.70,Default,,0000,0000,0000,,来  过来\N{\rEng}Come here.
+Dialogue: 0,0:11:14.33,0:11:15.82,Default,,0000,0000,0000,,干嘛？\N{\rEng}What?
+Dialogue: 0,0:11:16.03,0:11:17.97,Default,,0000,0000,0000,,哇  电风扇！\N{\rEng}An electric fan!
+Dialogue: 0,0:11:18.17,0:11:20.57,Default,,0000,0000,0000,,真的还假的？太好了！\N{\rEng}That's so great! Is it real?
+Dialogue: 0,0:11:20.77,0:11:22.47,Default,,0000,0000,0000,,我们家终于有电风扇了\N{\rEng}We finally have a fan!
+Dialogue: 0,0:11:22.67,0:11:25.54,Default,,0000,0000,0000,,-你先坐好  我开  -快点开  我要扇\N{\rEng}- Now sit down and let me turn it. - Quickly, dad!
+Dialogue: 0,0:11:31.72,0:11:34.41,Default,,0000,0000,0000,,老爸  这个电风扇  又是你捡回来的？\N{\rEng}Dad, did you find this in the garbage?
+Dialogue: 0,0:11:34.62,0:11:36.31,Default,,0000,0000,0000,,我买的\N{\rEng}No, I bought it.
+Dialogue: 0,0:11:36.95,0:11:38.39,Default,,0000,0000,0000,,好几十块钱呢这旧风扇\N{\rEng}It cost a lot of money.
+Dialogue: 0,0:11:38.59,0:11:39.89,Default,,0000,0000,0000,,你是不是又给人耍了？\N{\rEng}You were ripped off!
+Dialogue: 0,0:11:40.09,0:11:42.99,Default,,0000,0000,0000,,不会  我买的时候还是好的嘛\N{\rEng}No, it was fine when I bought it.
+Dialogue: 0,0:11:43.19,0:11:45.53,Default,,0000,0000,0000,,怎么好端端会爆了呢？\N{\rEng}So how come it's not working now?
+Dialogue: 0,0:11:45.73,0:11:48.93,Default,,0000,0000,0000,,你大爷  你做事机伶点行不行啊？\N{\rEng}Dumbass. Use your head next time.
+Dialogue: 0,0:11:49.13,0:11:51.10,Default,,0000,0000,0000,,谁是你大爷  你说什么？\N{\rEng}"Dumbass"? Where did you get that from?
+Dialogue: 0,0:11:51.30,0:11:52.53,Default,,0000,0000,0000,,是我同学\N{\rEng}A guy in my class.
+Dialogue: 0,0:11:52.74,0:11:54.67,Default,,0000,0000,0000,,你大爷是你同学？\N{\rEng}Oh, really? Well, let me tell you...
+Dialogue: 0,0:11:54.94,0:11:57.34,Default,,0000,0000,0000,,我们虽然穷但不乱说脏话\N{\rEng}We may be poor, but we don't use bad language.
+Dialogue: 0,0:11:57.54,0:12:00.27,Default,,0000,0000,0000,,我们不去偷  我们不去抢\N{\rEng}We don't steal we don't Rob.
+Dialogue: 0,0:12:00.48,0:12:03.74,Default,,0000,0000,0000,,不属于自己的东西  我们不会拿\N{\rEng}We don't take things that don't belong to us.
+Dialogue: 0,0:12:03.98,0:12:07.78,Default,,0000,0000,0000,,你要努力读书  将来做一个有用的人\N{\rEng}You must concentrate on your studies.
+Dialogue: 0,0:12:09.29,0:12:14.28,Default,,0000,0000,0000,,我啊  就是小时候没有书念  所以现在\N{\rEng}I didn't study at all when I was young and look where it's gotten me.
+Dialogue: 0,0:12:40.15,0:12:41.41,Default,,0000,0000,0000,,今天我们吃？\N{\rEng}We're having an apple today?
+Dialogue: 0,0:12:41.62,0:12:42.81,Default,,0000,0000,0000,,对\N{\rEng}Yes, we are.
+Dialogue: 0,0:12:44.15,0:12:45.42,Default,,0000,0000,0000,,等等\N{\rEng}But put it down now.
+Dialogue: 0,0:12:47.12,0:12:49.12,Default,,0000,0000,0000,,吃完饭再吃水果\N{\rEng}Finish your dinner first.
+Dialogue: 0,0:12:50.59,0:12:52.89,Default,,0000,0000,0000,,对了  老爸  我的运动鞋又破了\N{\rEng}Hey, dad, my sneakers are worn out again.
+Dialogue: 0,0:12:53.10,0:12:54.33,Default,,0000,0000,0000,,你再补一补吧\N{\rEng}Will you buy me some more?
+Dialogue: 0,0:12:54.53,0:12:57.59,Default,,0000,0000,0000,,最好再捡一双好一点的  不然要罚站\N{\rEng}I need you to get me a better pair, or I'll be sent off the field again.
+Dialogue: 0,0:12:58.17,0:13:00.64,Default,,0000,0000,0000,,知道了  我尽力吧\N{\rEng}Got it. Don't worry.
+Dialogue: 0,0:13:05.61,0:13:09.84,Default,,0000,0000,0000,,还在吃饭耶  打什么蟑螂啊\N{\rEng}You're still eating! Lay off the cockroach.
+Dialogue: 0,0:13:10.68,0:13:12.62,Default,,0000,0000,0000,,吃完饭再打\N{\rEng}You can get it after you've finished.
+Dialogue: 0,0:13:49.02,0:13:51.85,Default,,0000,0000,0000,,这个好  有进步\N{\rEng}Nice. You've improved.
+Dialogue: 0,0:13:57.06,0:13:58.93,Default,,0000,0000,0000,,不错\N{\rEng}Not bad.
+Dialogue: 0,0:14:33.30,0:14:37.36,Default,,0000,0000,0000,,最近有很多关于不明飞行物体  简称“UFO”的报导\N{\rEng}There have been many sightings lately of ufos, unidentified flying objects.
+Dialogue: 0,0:14:38.30,0:14:39.60,Default,,0000,0000,0000,,动画片呢？\N{\rEng}What happened to the cartoons?
+Dialogue: 0,0:14:39.80,0:14:42.07,Default,,0000,0000,0000,,马上来  你等一下嘛\N{\rEng}They'll be back in a minute.
+Dialogue: 0,0:14:43.31,0:14:45.71,Default,,0000,0000,0000,,请问你能不能说说当时的情况？\N{\rEng}Could you please tell us what happened?
+Dialogue: 0,0:14:45.91,0:14:47.43,Default,,0000,0000,0000,,我当时  我看见一个飞碟\N{\rEng}I saw a flying object.
+Dialogue: 0,0:14:47.64,0:14:50.70,Default,,0000,0000,0000,,“咻”一下的从这边飞到那边去了\N{\rEng}It flew from here to there with a "whew" sound.
+Dialogue: 0,0:14:53.25,0:14:54.77,Default,,0000,0000,0000,,可不可以详细说说那个飞碟？\N{\rEng}Can you describe the object in more detail?
+Dialogue: 0,0:14:54.99,0:14:56.68,Default,,0000,0000,0000,,那个飞碟会飞的\N{\rEng}That object could really fly!
+Dialogue: 0,0:14:56.89,0:14:58.72,Default,,0000,0000,0000,,但是飞得摇摇晃晃的\N{\rEng}Though it wobbled a bit.
+Dialogue: 0,0:14:58.92,0:15:00.36,Default,,0000,0000,0000,,我怀疑它撞过\N{\rEng}I suspect it had crashed before.
+Dialogue: 0,0:15:00.56,0:15:01.52,Default,,0000,0000,0000,,撞过？\N{\rEng}Crashed?
+Dialogue: 0,0:15:01.73,0:15:04.42,Default,,0000,0000,0000,,就是撞过车  好像是撞坏了\N{\rEng}Yes, like a car crash. It might have been broken.
+Dialogue: 0,0:15:04.63,0:15:06.46,Default,,0000,0000,0000,,我还拍了照片呢\N{\rEng}I took a picture of ft.
+Dialogue: 0,0:15:14.34,0:15:16.36,Default,,0000,0000,0000,,先生  你用什么相机拍的呢？\N{\rEng}What kind of camera did you use?
+Dialogue: 0,0:15:16.57,0:15:20.48,Default,,0000,0000,0000,,我那玩意儿可贵了  至于什么牌子我不方便说\N{\rEng}It was expensive, but I can't possibly tell you the make.
+Dialogue: 0,0:15:21.28,0:15:23.14,Default,,0000,0000,0000,,那个飞碟有没有发出什么声响？\N{\rEng}Did this particular flying object make a sound?
+Dialogue: 0,0:15:23.35,0:15:25.28,Default,,0000,0000,0000,,“咻”的一声嘛  我刚才说了\N{\rEng}It made some "whew" sounds like I just told you.
+Dialogue: 0,0:15:25.28,0:15:27.22,Default,,0000,0000,0000,,咻一声  你听过没有？咻一声\N{\rEng}"Whew." Do you hear me?
+Dialogue: 0,0:15:28.29,0:15:30.25,Default,,0000,0000,0000,,这两个太牛了\N{\rEng}Unbelievable.
+Dialogue: 0,0:15:51.34,0:15:52.83,Default,,0000,0000,0000,,你干嘛乱跑？\N{\rEng}Don't run off like that.
+Dialogue: 0,0:15:53.04,0:15:56.01,Default,,0000,0000,0000,,老爸  这个玩具叫长江一号\N{\rEng}Dad, this is called a cj1.
+Dialogue: 0,0:15:56.55,0:15:58.52,Default,,0000,0000,0000,,同学们都有  很好玩的\N{\rEng}Everyone at school has one. They're great!
+Dialogue: 0,0:15:58.72,0:15:59.68,Default,,0000,0000,0000,,是吗？\N{\rEng}Really?
+Dialogue: 0,0:16:01.55,0:16:03.02,Default,,0000,0000,0000,,来  我们走了  放回去\N{\rEng}Let's go home. Put it back.
+Dialogue: 0,0:16:15.97,0:16:17.49,Default,,0000,0000,0000,,干嘛？\N{\rEng}What's the matter?
+Dialogue: 0,0:16:18.04,0:16:19.59,Default,,0000,0000,0000,,不如买一个吧\N{\rEng}Why can't I have it?
+Dialogue: 0,0:16:19.80,0:16:21.86,Default,,0000,0000,0000,,我下个月发工资再买\N{\rEng}We'll buy it after I get paid next month.
+Dialogue: 0,0:16:22.07,0:16:23.20,Default,,0000,0000,0000,,放下\N{\rEng}Now, put it down.
+Dialogue: 0,0:16:31.58,0:16:33.35,Default,,0000,0000,0000,,放手\N{\rEng}Let go!
+Dialogue: 0,0:16:37.69,0:16:40.99,Default,,0000,0000,0000,,你怎么那么不听话？我没钱啊\N{\rEng}Didn't you hear me? I have no money.
+Dialogue: 0,0:16:42.26,0:16:47.16,Default,,0000,0000,0000,,就买这一次  以后  以后永远都不买了\N{\rEng}If you buy me this, I'll never ask for anything ever again.
+Dialogue: 0,0:16:47.36,0:16:48.85,Default,,0000,0000,0000,,求求你了\N{\rEng}I beg you.
+Dialogue: 0,0:16:50.83,0:16:53.89,Default,,0000,0000,0000,,这个？这有什么功能？\N{\rEng}What about this one? What features does it have?
+Dialogue: 0,0:16:56.24,0:16:57.87,Default,,0000,0000,0000,,放手\N{\rEng}Let go.
+Dialogue: 0,0:17:00.24,0:17:01.84,Default,,0000,0000,0000,,放手！\N{\rEng}Let go!
+Dialogue: 0,0:17:06.52,0:17:08.07,Default,,0000,0000,0000,,放手！\N{\rEng}Let go!
+Dialogue: 0,0:17:11.59,0:17:12.92,Default,,0000,0000,0000,,放手！\N{\rEng}Let go!
+Dialogue: 0,0:17:14.79,0:17:15.85,Default,,0000,0000,0000,,站住\N{\rEng}Come back!
+Dialogue: 0,0:17:17.29,0:17:19.85,Default,,0000,0000,0000,,先生  这个你买不买？\N{\rEng}Sir? Do you wish to buy that?”
+Dialogue: 0,0:17:34.71,0:17:37.44,Default,,0000,0000,0000,,不哭了  好了\N{\rEng}Come on, dicky. Don't cry.
+Dialogue: 0,0:17:37.65,0:17:39.58,Default,,0000,0000,0000,,好了  好孩子  好了\N{\rEng}Stop crying now.
+Dialogue: 0,0:17:39.78,0:17:41.25,Default,,0000,0000,0000,,不要哭了\N{\rEng}Good boy, stop crying.
+Dialogue: 0,0:17:41.45,0:17:42.61,Default,,0000,0000,0000,,小迪\N{\rEng}Dicky.
+Dialogue: 0,0:17:43.55,0:17:44.78,Default,,0000,0000,0000,,周先生是吗？\N{\rEng}Are you Mr. chow?
+Dialogue: 0,0:17:44.99,0:17:47.62,Default,,0000,0000,0000,,我是小迪的老师  我姓袁  你好\N{\rEng}I'm miss yuen, dicky's teacher. Good to meet you.
+Dialogue: 0,0:17:47.82,0:17:50.22,Default,,0000,0000,0000,,袁老师  你好\N{\rEng}Miss yuen. Good to meet you too.
+Dialogue: 0,0:17:50.49,0:17:52.93,Default,,0000,0000,0000,,小迪在学校乖不乖？\N{\rEng}Is dicky well-behaved at school?
+Dialogue: 0,0:17:53.13,0:17:55.19,Default,,0000,0000,0000,,他在学校挺乖的\N{\rEng}Yes, he's quite good.
+Dialogue: 0,0:17:55.73,0:17:57.39,Default,,0000,0000,0000,,他刚刚还在发脾气\N{\rEng}He's in a really bad mood right now.
+Dialogue: 0,0:17:57.60,0:18:00.20,Default,,0000,0000,0000,,我知道  小孩子看到玩具都想要\N{\rEng}I know. Kids just want every toy they see.
+Dialogue: 0,0:18:00.40,0:18:01.37,Default,,0000,0000,0000,,对\N{\rEng}True.
+Dialogue: 0,0:18:01.57,0:18:05.44,Default,,0000,0000,0000,,就是我今天刚好没带钱  所以就\N{\rEng}Just happens I didn't bring any money today, so...
+Dialogue: 0,0:18:06.61,0:18:07.87,Default,,0000,0000,0000,,小迪  去找爸爸吧\N{\rEng}Dicky, go to your dad.
+Dialogue: 0,0:18:08.31,0:18:09.44,Default,,0000,0000,0000,,来\N{\rEng}Come here.
+Dialogue: 0,0:18:11.18,0:18:13.65,Default,,0000,0000,0000,,-对不起  周先生  -他就是这样\N{\rEng}- I'm sorry, Mr. chow. - Don't worry. He's like that.
+Dialogue: 0,0:18:14.08,0:18:16.71,Default,,0000,0000,0000,,其实我一直都想和您做一个家访\N{\rEng}In fact, I'd like to do a home visit.
+Dialogue: 0,0:18:16.92,0:18:19.75,Default,,0000,0000,0000,,他也有跟我说  但是我工作比较忙\N{\rEng}He did tell me, but I'm very busy at work...
+Dialogue: 0,0:18:19.96,0:18:23.15,Default,,0000,0000,0000,,我觉得教育孩子  单靠老师是不行的\N{\rEng}I believe that a good education doesn't just rely on the teacher.
+Dialogue: 0,0:18:23.36,0:18:25.66,Default,,0000,0000,0000,,所以我很想很想多和你做一些沟通\N{\rEng}That's why I'd like to involve you.
+Dialogue: 0,0:18:25.86,0:18:27.42,Default,,0000,0000,0000,,这样对他也比较好\N{\rEng}It'll be good for him.
+Dialogue: 0,0:18:27.76,0:18:29.46,Default,,0000,0000,0000,,喔  是的\N{\rEng}Ah, yes. I see.
+Dialogue: 0,0:18:29.93,0:18:31.83,Default,,0000,0000,0000,,小迪  老师要走了\N{\rEng}Dicky, I need to go now.
+Dialogue: 0,0:18:33.60,0:18:37.00,Default,,0000,0000,0000,,你不要乱发脾气  要听爸爸话  知道吗？\N{\rEng}Don't be so grumpy. And listen to your dad, okay?
+Dialogue: 0,0:18:37.97,0:18:39.41,Default,,0000,0000,0000,,知道了吗？\N{\rEng}Okay?
+Dialogue: 0,0:18:42.21,0:18:43.34,Default,,0000,0000,0000,,-那我先走了  -好\N{\rEng}- I must go. - Okay.
+Dialogue: 0,0:18:43.55,0:18:45.11,Default,,0000,0000,0000,,-再见  -再见\N{\rEng}- Bye, now. - Bye, now.
+Dialogue: 0,0:21:21.27,0:21:22.43,Default,,0000,0000,0000,,小迪\N{\rEng}Dicky.
+Dialogue: 0,0:21:22.64,0:21:24.16,Default,,0000,0000,0000,,把头转过来\N{\rEng}I ook at me.
+Dialogue: 0,0:21:26.44,0:21:30.00,Default,,0000,0000,0000,,我有一个玩具  比长江一号更厉害\N{\rEng}I have something way better than cj1.
+Dialogue: 0,0:21:30.21,0:21:31.65,Default,,0000,0000,0000,,你要不要看看？\N{\rEng}Do you want to see it?
+Dialogue: 0,0:21:39.89,0:21:41.65,Default,,0000,0000,0000,,真的不要看吗？\N{\rEng}Are you sure?
+Dialogue: 0,0:21:43.19,0:21:47.65,Default,,0000,0000,0000,,那好  我把它扔掉算了  我加班去了\N{\rEng}In that case, I'll throw it away and get back to work.
+Dialogue: 0,0:22:32.24,0:22:33.37,Default,,0000,0000,0000,,老师再见\N{\rEng}Goodbye, sir.
+Dialogue: 0,0:22:33.58,0:22:34.64,Default,,0000,0000,0000,,再见\N{\rEng}Goodbye.
+Dialogue: 0,0:22:36.68,0:22:37.91,Default,,0000,0000,0000,,小芬\N{\rEng}Fanny.
+Dialogue: 0,0:22:38.11,0:22:41.71,Default,,0000,0000,0000,,小迪  你刚刚说的  好玩东西是什么？\N{\rEng}Where's this amazing toy, then?
+Dialogue: 0,0:22:41.92,0:22:43.18,Default,,0000,0000,0000,,你看\N{\rEng}I ook!
+Dialogue: 0,0:22:48.63,0:22:50.59,Default,,0000,0000,0000,,这有什么好玩的？\N{\rEng}What's so great about that?
+Dialogue: 0,0:22:50.79,0:22:53.06,Default,,0000,0000,0000,,很好玩的  你看！\N{\rEng}It's fun. Look!
+Dialogue: 0,0:22:54.13,0:22:57.40,Default,,0000,0000,0000,,我觉得没什么好玩的\N{\rEng}It doesn't look that fun to me.
+Dialogue: 0,0:22:57.63,0:22:58.69,Default,,0000,0000,0000,,你觉得呢？\N{\rEng}What do you think?
+Dialogue: 0,0:22:59.24,0:23:01.76,Default,,0000,0000,0000,,其实我也觉得没什么好玩的\N{\rEng}Actually, I agree. It's no fun.
+Dialogue: 0,0:23:03.14,0:23:06.27,Default,,0000,0000,0000,,没关系  明天见\N{\rEng}Never mind. See you tomorrow.
+Dialogue: 0,0:23:09.95,0:23:12.11,Default,,0000,0000,0000,,你手里拿着什么东西？\N{\rEng}What's that thing you're holding?
+Dialogue: 0,0:23:12.32,0:23:13.68,Default,,0000,0000,0000,,没有\N{\rEng}Nothing.
+Dialogue: 0,0:23:13.88,0:23:15.11,Default,,0000,0000,0000,,一定是垃圾\N{\rEng}It looks like rubbish.
+Dialogue: 0,0:23:16.49,0:23:18.61,Default,,0000,0000,0000,,谁说是垃圾了？\N{\rEng}Says who?
+Dialogue: 0,0:23:18.82,0:23:22.22,Default,,0000,0000,0000,,它比长江一号还要厉害\N{\rEng}This is way better than cj1.
+Dialogue: 0,0:23:22.56,0:23:24.69,Default,,0000,0000,0000,,啊  它叫什么名字？\N{\rEng}So, what's it called?
+Dialogue: 0,0:23:27.26,0:23:29.70,Default,,0000,0000,0000,,它叫长江七号\N{\rEng}It's called cj7_
+Dialogue: 0,0:23:30.07,0:23:31.97,Default,,0000,0000,0000,,算了吧  死穷鬼\N{\rEng}Pathetic piece of crap.
+Dialogue: 0,0:23:32.17,0:23:35.80,Default,,0000,0000,0000,,我看一定是你爸爸  从垃圾桶里捡回来的\N{\rEng}Your dad found it in the garbage.
+Dialogue: 0,0:23:36.24,0:23:38.71,Default,,0000,0000,0000,,不许说我爸爸  要不然我打你\N{\rEng}Don't talk about my dad like that! I'm going to beat you up.
+Dialogue: 0,0:23:39.11,0:23:40.94,Default,,0000,0000,0000,,好啊\N{\rEng}Oh, yeah?
+Dialogue: 0,0:23:56.33,0:23:57.62,Default,,0000,0000,0000,,你好\N{\rEng}Hello.
+Dialogue: 0,0:24:35.83,0:24:37.66,Default,,0000,0000,0000,,我跟你说过多少遍？\N{\rEng}How many times do I have to tell you?
+Dialogue: 0,0:24:37.87,0:24:40.86,Default,,0000,0000,0000,,我们虽然穷  但是不打架\N{\rEng}We might be poor, but we don't fight.
+Dialogue: 0,0:24:41.50,0:24:42.87,Default,,0000,0000,0000,,你太不长进了\N{\rEng}You really disappoint me.
+Dialogue: 0,0:24:43.07,0:24:46.34,Default,,0000,0000,0000,,你看看你  校服也弄破了\N{\rEng}Look at this. Your uniform's all torn.
+Dialogue: 0,0:24:46.88,0:24:48.37,Default,,0000,0000,0000,,你为什么要打架？\N{\rEng}What was the fight about?
+Dialogue: 0,0:24:50.21,0:24:51.54,Default,,0000,0000,0000,,同学笑我\N{\rEng}They were laughing at me.
+Dialogue: 0,0:24:51.92,0:24:53.21,Default,,0000,0000,0000,,同学笑你什么？\N{\rEng}What about?
+Dialogue: 0,0:24:59.36,0:25:01.29,Default,,0000,0000,0000,,笑你什么？\N{\rEng}Well?
+Dialogue: 0,0:25:10.70,0:25:11.86,Default,,0000,0000,0000,,好\N{\rEng}Fine.
+Dialogue: 0,0:25:13.64,0:25:15.50,Default,,0000,0000,0000,,你不说是吧\N{\rEng}If you're not going to tell me...
+Dialogue: 0,0:25:20.18,0:25:22.08,Default,,0000,0000,0000,,是你逼我的\N{\rEng}Then I have no choice in the matter.
+Dialogue: 0,0:25:35.26,0:25:36.23,Default,,0000,0000,0000,,说！\N{\rEng}I ast chancel
+Dialogue: 0,0:25:42.43,0:25:43.83,Default,,0000,0000,0000,,它在动\N{\rEng}It's moving!
+Dialogue: 0,0:26:13.56,0:26:14.59,Default,,0000,0000,0000,,有鬼\N{\rEng}There are ghosts.
+Dialogue: 0,0:26:14.80,0:26:16.10,Default,,0000,0000,0000,,什么鬼？\N{\rEng}(Ghosts? Where?
+Dialogue: 0,0:26:17.07,0:26:18.16,Default,,0000,0000,0000,,那个球有鬼\N{\rEng}There. In the ball
+Dialogue: 0,0:26:18.37,0:26:21.30,Default,,0000,0000,0000,,哇  你别想转移话题  坐下\N{\rEng}don't change the subject!
+Dialogue: 0,0:26:22.01,0:26:24.39,Default,,0000,0000,0000,,你就会欺负我没读过书\N{\rEng}You think you can run rings around me,
+Dialogue: 0,0:26:24.39,0:26:26.77,Default,,0000,0000,0000,,你信不信我一巴掌打死你\N{\rEng}but you're not as clever as you think.
+Dialogue: 0,0:26:26.98,0:26:30.94,Default,,0000,0000,0000,,你看看  校服破成这个样子  明天怎么上学？\N{\rEng}Your uniform's a mess. What will you wear for school tomorrow?
+Dialogue: 0,0:26:33.25,0:26:35.65,Default,,0000,0000,0000,,我想捡都不知道去哪捡给你\N{\rEng}Do I have to go hunt for another one?
+Dialogue: 0,0:26:36.12,0:26:38.05,Default,,0000,0000,0000,,我等一下再打你\N{\rEng}I'll deal with you later.
+Dialogue: 0,0:26:54.47,0:26:56.73,Default,,0000,0000,0000,,有鬼！挂在那边！\N{\rEng}There's a ghost! Hanging over there!
+Dialogue: 0,0:26:57.47,0:27:00.00,Default,,0000,0000,0000,,救命  有鬼  太恐怖了\N{\rEng}Help! Ghost! It's horrible!
+Dialogue: 0,0:27:00.21,0:27:02.51,Default,,0000,0000,0000,,有穿红衣服的鬼挂在那边\N{\rEng}There's a red ghost hanging there!
+Dialogue: 0,0:27:03.68,0:27:06.95,Default,,0000,0000,0000,,好怕  太恐怖了  挂在那边\N{\rEng}Hanging! Too horrible!
+Dialogue: 0,0:27:07.15,0:27:08.52,Default,,0000,0000,0000,,别吵了！\N{\rEng}Calm down!
+Dialogue: 0,0:27:09.05,0:27:11.08,Default,,0000,0000,0000,,这破灯掉下来嘛  什么鬼？\N{\rEng}It's a broken lamp. Can't you see?
+Dialogue: 0,0:27:20.83,0:27:22.09,Default,,0000,0000,0000,,又怎么了\N{\rEng}Not again!
+Dialogue: 0,0:27:22.30,0:27:23.77,Default,,0000,0000,0000,,你也像鬼\N{\rEng}You're a ghost too.
+Dialogue: 0,0:27:23.97,0:27:28.60,Default,,0000,0000,0000,,你别再说话  不然我真的把你丢出去  听到没？\N{\rEng}Stop shouting! I'll send you outside if you don't stop! Understand?
+Dialogue: 0,0:28:08.61,0:28:10.70,Default,,0000,0000,0000,,吃摇头丸了  你？\N{\rEng}Are you on drugs or something?
+Dialogue: 0,0:28:14.55,0:28:16.88,Default,,0000,0000,0000,,爸爸  你干嘛？干嘛？\N{\rEng}What are you doing?
+Dialogue: 0,0:28:17.09,0:28:18.75,Default,,0000,0000,0000,,不要  不要把我关在里面\N{\rEng}Please don't lock me inl!
+Dialogue: 0,0:28:18.96,0:28:22.05,Default,,0000,0000,0000,,那边真的有鬼  我真的没有骗你  爸爸\N{\rEng}There's a ghost. You have to believe me.
+Dialogue: 0,0:28:22.26,0:28:24.35,Default,,0000,0000,0000,,放我出去\N{\rEng}I et me out!
+Dialogue: 0,0:28:24.56,0:28:29.86,Default,,0000,0000,0000,,救命  放我出去\N{\rEng}Please let me out!
+Dialogue: 0,0:28:43.08,0:28:45.27,Default,,0000,0000,0000,,阿弥陀佛\N{\rEng}Help me, lord.
+Dialogue: 0,0:30:34.02,0:30:36.65,Default,,0000,0000,0000,,-怕了没？  -怕了\N{\rEng}- Learned your lesson now? - Yes, dad.
+Dialogue: 0,0:30:36.86,0:30:38.12,Default,,0000,0000,0000,,那还敢不敢调皮？\N{\rEng}Will you behave yourself now?
+Dialogue: 0,0:30:38.33,0:30:39.99,Default,,0000,0000,0000,,不敢了  真的不敢了\N{\rEng}I will. I really will.
+Dialogue: 0,0:30:40.60,0:30:42.69,Default,,0000,0000,0000,,我要去加班了  你自己要乖\N{\rEng}I have to get back to work.
+Dialogue: 0,0:30:43.03,0:30:45.73,Default,,0000,0000,0000,,你快去加班  再见\N{\rEng}Okay! Off you go. Bye!
+Dialogue: 0,0:31:24.47,0:31:26.37,Default,,0000,0000,0000,,你是从外星来的吗？\N{\rEng}Are you from outer space?
+Dialogue: 0,0:31:30.05,0:31:32.17,Default,,0000,0000,0000,,你是不是来侵略地球的？\N{\rEng}Have you come to invade earth?
+Dialogue: 0,0:32:10.42,0:32:15.65,Default,,0000,0000,0000,,我觉得  你应该是外星玩具狗\N{\rEng}I think you might be an alien toy dog.
+Dialogue: 0,0:32:39.62,0:32:40.81,Default,,0000,0000,0000,,我叫小迪\N{\rEng}My name is dicky.
+Dialogue: 0,0:32:41.02,0:32:43.18,Default,,0000,0000,0000,,你叫长江七号好不好？\N{\rEng}Can I call you cj77?
+Dialogue: 0,0:32:44.85,0:32:47.08,Default,,0000,0000,0000,,你摇尾巴就是喜欢了？\N{\rEng}If you wag your tail, it means you like it!
+Dialogue: 0,0:32:47.52,0:32:48.99,Default,,0000,0000,0000,,长江七号！\N{\rEng}Cj7!
+Dialogue: 0,0:33:44.51,0:33:46.57,Default,,0000,0000,0000,,我们家的都是烂的\N{\rEng}The apples in our house are always rotten.
+Dialogue: 0,0:33:46.78,0:33:48.51,Default,,0000,0000,0000,,为什么这个那么新鲜？\N{\rEng}So how come this one's not?
+Dialogue: 0,0:33:48.72,0:33:50.08,Default,,0000,0000,0000,,是不是你会变魔术？\N{\rEng}You know magic?
+Dialogue: 0,0:33:55.46,0:33:58.36,Default,,0000,0000,0000,,好甜啊  肯定是你会变魔术\N{\rEng}Wow! It's so sweet. You really do know magic.
+Dialogue: 0,0:33:58.63,0:34:00.93,Default,,0000,0000,0000,,我发财了！\N{\rEng}I'm going to be rich!
+Dialogue: 0,0:34:18.05,0:34:22.21,Default,,0000,0000,0000,,如果你能打败  这个地球上最凶恶的狗\N{\rEng}If you can beat the most vicious dog on earth...
+Dialogue: 0,0:34:22.42,0:34:26.79,Default,,0000,0000,0000,,那就证明你真的是太空超人狗\N{\rEng}Then you really are a superdog from space.
+Dialogue: 0,0:34:26.99,0:34:28.01,Default,,0000,0000,0000,,去吧\N{\rEng}(50!
+Dialogue: 0,0:34:54.45,0:34:56.32,Default,,0000,0000,0000,,好厉害\N{\rEng}Oh, my god!
+Dialogue: 0,0:35:16.94,0:35:20.93,Default,,0000,0000,0000,,今天考试  但是昨天一直在跟你玩  没有好好复习\N{\rEng}I have a test today and I've been playing with you instead of studying.
+Dialogue: 0,0:35:21.14,0:35:24.44,Default,,0000,0000,0000,,我又想拿一百分  可不可以帮帮忙？\N{\rEng}But I really want to get 100. Can you help me?
+Dialogue: 0,0:35:44.20,0:35:45.46,Default,,0000,0000,0000,,是什么？\N{\rEng}What's that you're making?
+Dialogue: 0,0:35:52.64,0:35:54.34,Default,,0000,0000,0000,,周小迪\N{\rEng}Dicky chow.
+Dialogue: 0,0:35:55.54,0:35:57.81,Default,,0000,0000,0000,,你干嘛戴这个眼镜上课？\N{\rEng}Why are you wearing those glasses?
+Dialogue: 0,0:35:58.01,0:35:59.91,Default,,0000,0000,0000,,我眼睛受伤了  你要不要看看？\N{\rEng}My eyes hurt. Do you want to take a look?
+Dialogue: 0,0:36:00.12,0:36:03.24,Default,,0000,0000,0000,,不要走过来  坐下\N{\rEng}No, I don't. Sit down.
+Dialogue: 0,0:36:06.06,0:36:09.35,Default,,0000,0000,0000,,考试开始\N{\rEng}Begin writing now!
+Dialogue: 0,0:37:26.47,0:37:29.03,Default,,0000,0000,0000,,对不起  有苍蝇\N{\rEng}Sorry, sir. There was a fly.
+Dialogue: 0,0:37:29.37,0:37:31.17,Default,,0000,0000,0000,,有苍蝇\N{\rEng}A fly?
+Dialogue: 0,0:37:34.54,0:37:37.21,Default,,0000,0000,0000,,对不起  有苍蝇\N{\rEng}Sorry, sir. There was a fly.
+Dialogue: 0,0:37:49.02,0:37:51.52,Default,,0000,0000,0000,,今天考试的成绩出来了\N{\rEng}I now have the results of today's test.
+Dialogue: 0,0:37:51.73,0:37:54.53,Default,,0000,0000,0000,,周小迪第一次拿一百分\N{\rEng}And for the first time, dicky chow got 100.
+Dialogue: 0,0:38:01.57,0:38:03.23,Default,,0000,0000,0000,,-谢谢老师  -等等\N{\rEng}- Thank you, sir! - Hold on a minute.
+Dialogue: 0,0:38:04.77,0:38:07.24,Default,,0000,0000,0000,,我要检查你的眼镜\N{\rEng}I want to see those glasses.
+Dialogue: 0,0:38:26.10,0:38:28.89,Default,,0000,0000,0000,,刚才那个超级眼镜果然厉害\N{\rEng}Those super-glasses were fantastic!
+Dialogue: 0,0:38:29.10,0:38:32.66,Default,,0000,0000,0000,,马上要上体育课了  我要一双超级运动鞋\N{\rEng}It's p.E. Next, so I'll need super-sneakers!
+Dialogue: 0,0:38:42.71,0:38:44.24,Default,,0000,0000,0000,,好紧张\N{\rEng}This is so exciting.
+Dialogue: 0,0:38:50.12,0:38:53.25,Default,,0000,0000,0000,,跳高跳得好  就是一个字\N{\rEng}Excellence at the high jump...
+Dialogue: 0,0:38:53.46,0:38:55.08,Default,,0000,0000,0000,,天份  努力\N{\rEng}Requires talent, hard work...
+Dialogue: 0,0:38:55.29,0:38:57.59,Default,,0000,0000,0000,,腰马合一  充足睡眠\N{\rEng}Training, a good night's sleep...
+Dialogue: 0,0:38:57.79,0:38:59.73,Default,,0000,0000,0000,,还有尊敬老师\N{\rEng}And finally, respect for your teacher.
+Dialogue: 0,0:38:59.93,0:39:01.56,Default,,0000,0000,0000,,这是我创的记录\N{\rEng}This is my personal record.
+Dialogue: 0,0:39:01.76,0:39:04.20,Default,,0000,0000,0000,,到现在还没有人可以跳得过去\N{\rEng}So far no one has bettered it
+Dialogue: 0,0:39:12.51,0:39:15.31,Default,,0000,0000,0000,,老师  我今天有新的运动鞋\N{\rEng}I have new sneakers today, sir.
+Dialogue: 0,0:39:17.68,0:39:20.74,Default,,0000,0000,0000,,老师  他刚刚好像破了你的记录\N{\rEng}Sir! He just broke your record.
+Dialogue: 0,0:39:28.02,0:39:30.67,Default,,0000,0000,0000,,小迪  小孩子是不需要跳那么高的\N{\rEng}Dicky, it doesn't ring true
+Dialogue: 0,0:39:30.67,0:39:33.33,Default,,0000,0000,0000,,那样是很不合情理的\N{\rEng}that a kid can jump that high.
+Dialogue: 0,0:39:34.20,0:39:36.13,Default,,0000,0000,0000,,你乖乖地再跳一次吧\N{\rEng}Be a good boy and do it again.
+Dialogue: 0,0:40:58.38,0:41:00.75,Default,,0000,0000,0000,,周小迪  你穿的是什么鞋？\N{\rEng}Dicky chow. What are those shoes you're wearing?
+Dialogue: 0,0:41:00.95,0:41:02.35,Default,,0000,0000,0000,,不关你的事！\N{\rEng}It's none of your business!
+Dialogue: 0,0:41:02.55,0:41:03.92,Default,,0000,0000,0000,,你太过份了\N{\rEng}This is too much.
+Dialogue: 0,0:41:04.12,0:41:05.98,Default,,0000,0000,0000,,是你们逼我的\N{\rEng}You drove me to this.
+Dialogue: 0,0:41:06.19,0:41:07.18,Default,,0000,0000,0000,,下来！\N{\rEng}Come down!
+Dialogue: 0,0:41:29.71,0:41:32.55,Default,,0000,0000,0000,,-小迪  你疯了？  -我\N{\rEng}Dicky! Are you out of your mind? I
+Dialogue: 0,0:41:32.98,0:41:35.25,Default,,0000,0000,0000,,那边  快点  抓住他\N{\rEng}over here. Catch him!
+Dialogue: 0,0:41:35.88,0:41:38.01,Default,,0000,0000,0000,,小迪  回头是岸\N{\rEng}Come to your senses, dicky.
+Dialogue: 0,0:41:38.42,0:41:43.08,Default,,0000,0000,0000,,袁老师  苦海无涯\N{\rEng}Miss yuen, bitterness, like the sea, is boundless.
+Dialogue: 0,0:41:46.06,0:41:47.09,Default,,0000,0000,0000,,小迪\N{\rEng}Dicky!
+Dialogue: 0,0:41:47.30,0:41:50.39,Default,,0000,0000,0000,,周小迪  你跳那么高干什么？下来\N{\rEng}Dicky chow! How can you jump so high? Come down this minute!
+Dialogue: 0,0:42:26.67,0:42:29.73,Default,,0000,0000,0000,,这么高难度你也睡得着？\N{\rEng}How on earth can you sleep like that?
+Dialogue: 0,0:42:30.34,0:42:32.60,Default,,0000,0000,0000,,起床了你  上学了\N{\rEng}Wake up. It's nearly time for school.
+Dialogue: 0,0:42:35.34,0:42:38.68,Default,,0000,0000,0000,,叫你自己要乖的嘛  每次都睡过头\N{\rEng}What do I have to do to get you up in the morning?
+Dialogue: 0,0:42:40.18,0:42:41.31,Default,,0000,0000,0000,,作梦？\N{\rEng}It was all a dream?
+Dialogue: 0,0:42:47.06,0:42:48.58,Default,,0000,0000,0000,,是真的\N{\rEng}You're real.
+Dialogue: 0,0:42:48.96,0:42:51.08,Default,,0000,0000,0000,,我去上学了\N{\rEng}I'm getting ready right now!
+Dialogue: 0,0:42:54.13,0:42:57.00,Default,,0000,0000,0000,,老爸  今天考试我要拿一百分\N{\rEng}Dad, I'm going to get 100 on the exam today.
+Dialogue: 0,0:42:57.40,0:42:58.37,Default,,0000,0000,0000,,啊？\N{\rEng}What?
+Dialogue: 0,0:42:58.57,0:42:59.97,Default,,0000,0000,0000,,我要拿一百分！\N{\rEng}I'm going to get 100!
+Dialogue: 0,0:43:00.17,0:43:01.19,Default,,0000,0000,0000,,就凭你？\N{\rEng}Really?
+Dialogue: 0,0:43:01.40,0:43:05.64,Default,,0000,0000,0000,,就凭我  一百分！\N{\rEng}Yes! All on my own! 100!
+Dialogue: 0,0:43:06.74,0:43:09.37,Default,,0000,0000,0000,,那就好\N{\rEng}That's great.
+Dialogue: 0,0:43:21.52,0:43:25.79,Default,,0000,0000,0000,,如果你能打败  这个地球上最凶恶的狗\N{\rEng}If you can beat the most vicious dog on earth...
+Dialogue: 0,0:43:25.99,0:43:30.23,Default,,0000,0000,0000,,那就证明你真的是太空超人狗\N{\rEng}Then you really are a superdog from space.
+Dialogue: 0,0:43:30.43,0:43:31.46,Default,,0000,0000,0000,,去吧\N{\rEng}(50!
+Dialogue: 0,0:43:55.72,0:43:57.06,Default,,0000,0000,0000,,走啊！\N{\rEng}Run!
+Dialogue: 0,0:44:19.95,0:44:21.88,Default,,0000,0000,0000,,刚才是怎么回事？\N{\rEng}So, what happened back there?
+Dialogue: 0,0:44:25.79,0:44:28.45,Default,,0000,0000,0000,,你不是太空超人狗吗？\N{\rEng}You're supposed to be the superdog from space.
+Dialogue: 0,0:44:28.66,0:44:30.75,Default,,0000,0000,0000,,你是不是在装傻？\N{\rEng}Don't tell me you were just pretending.
+Dialogue: 0,0:44:30.96,0:44:33.69,Default,,0000,0000,0000,,我不是在和你开玩笑\N{\rEng}Seriously.
+Dialogue: 0,0:44:33.90,0:44:36.42,Default,,0000,0000,0000,,今天考试  我要拿一百分\N{\rEng}I have to get 100 on the exam.
+Dialogue: 0,0:44:36.63,0:44:40.59,Default,,0000,0000,0000,,你一定有什么法宝  拿出来帮帮忙\N{\rEng}I need you to work your magic for me.
+Dialogue: 0,0:44:42.17,0:44:44.80,Default,,0000,0000,0000,,别玩了  我是很认真的\N{\rEng}Come on, now. Please! I'm not joking.
+Dialogue: 0,0:44:48.24,0:44:49.80,Default,,0000,0000,0000,,法宝  拿出来\N{\rEng}You have to give me magic weapons.
+Dialogue: 0,0:45:57.18,0:45:58.20,Default,,0000,0000,0000,,时间到\N{\rEng}Time's up.
+Dialogue: 0,0:45:58.41,0:46:01.11,Default,,0000,0000,0000,,我还没开始\N{\rEng}What? But I haven't started yet.
+Dialogue: 0,0:46:03.85,0:46:05.51,Default,,0000,0000,0000,,你怎么拿着一坨屎？\N{\rEng}What's with the turd?
+Dialogue: 0,0:46:06.76,0:46:08.48,Default,,0000,0000,0000,,屎  不会吧？\N{\rEng}Turd? It's not that!
+Dialogue: 0,0:46:08.69,0:46:10.52,Default,,0000,0000,0000,,不信你试试看\N{\rEng}Shows how much you know!
+Dialogue: 0,0:46:21.17,0:46:23.40,Default,,0000,0000,0000,,你敢耍我！\N{\rEng}You set me up!
+Dialogue: 0,0:46:27.18,0:46:29.80,Default,,0000,0000,0000,,我跟你拼了\N{\rEng}I'm going to kill you!
+Dialogue: 0,0:46:34.08,0:46:36.24,Default,,0000,0000,0000,,最后一次机会  给我法宝\N{\rEng}Give me the magic weapons now!
+Dialogue: 0,0:46:46.93,0:46:49.19,Default,,0000,0000,0000,,你为什么\N{\rEng}Why, you...
+Dialogue: 0,0:46:54.14,0:46:55.36,Default,,0000,0000,0000,,你\N{\rEng}You
+Dialogue: 0,0:47:14.49,0:47:16.39,Default,,0000,0000,0000,,老师  你听我说\N{\rEng}Please, sir. Can I say something?
+Dialogue: 0,0:47:16.59,0:47:18.06,Default,,0000,0000,0000,,你不要说了\N{\rEng}No, you can't.
+Dialogue: 0,0:47:19.66,0:47:21.25,Default,,0000,0000,0000,,你这个夫暇\N{\rEng}You are a poor student.
+Dialogue: 0,0:47:21.46,0:47:24.09,Default,,0000,0000,0000,,低俗  人面兽心的学生\N{\rEng}You are always dirty, and you are very wicked.
+Dialogue: 0,0:47:24.30,0:47:26.73,Default,,0000,0000,0000,,没有品位到这种境界\N{\rEng}You discredit the school.
+Dialogue: 0,0:47:26.94,0:47:28.73,Default,,0000,0000,0000,,还有什么好说的\N{\rEng}There's nothing more to say.
+Dialogue: 0,0:47:29.17,0:47:30.80,Default,,0000,0000,0000,,把他弄干净\N{\rEng}Now clean him up!
+Dialogue: 0,0:47:42.18,0:47:43.74,Default,,0000,0000,0000,,七仔？\N{\rEng}Cj77?
+Dialogue: 0,0:47:44.09,0:47:46.15,Default,,0000,0000,0000,,快点出来\N{\rEng}Please come out.
+Dialogue: 0,0:47:47.52,0:47:49.82,Default,,0000,0000,0000,,我怎么会生你气呢？\N{\rEng}Why would I be mad at you?
+Dialogue: 0,0:47:50.09,0:47:52.29,Default,,0000,0000,0000,,我们是好朋友嘛\N{\rEng}We're good friends.
+Dialogue: 0,0:47:52.53,0:47:55.96,Default,,0000,0000,0000,,大便对我来说是小菜一碟\N{\rEng}The turd wasn't important.
+Dialogue: 0,0:47:56.26,0:47:58.43,Default,,0000,0000,0000,,我有什么大便没见过呢？\N{\rEng}I've seen it all before.
+Dialogue: 0,0:47:58.77,0:48:03.17,Default,,0000,0000,0000,,这件事已经随风而过  没事\N{\rEng}Let's just forget it ever happened. Okay?
+Dialogue: 0,0:48:03.61,0:48:07.77,Default,,0000,0000,0000,,其实我是很疼你的  你知道吗？\N{\rEng}In fact, I love you very much. Do you know that?
+Dialogue: 0,0:48:10.68,0:48:13.01,Default,,0000,0000,0000,,七仔？过来\N{\rEng}Cj77 come here.
+Dialogue: 0,0:48:14.62,0:48:16.52,Default,,0000,0000,0000,,乖\N{\rEng}Closer!
+Dialogue: 0,0:48:27.20,0:48:29.13,Default,,0000,0000,0000,,我捅死你\N{\rEng}I'm going to stab you to death!
+Dialogue: 0,0:48:35.74,0:48:39.80,Default,,0000,0000,0000,,你这个太空垃圾狗  低科技又低级趣味\N{\rEng}Rubbish dog from space. You're low-tech and boring.
+Dialogue: 0,0:48:40.01,0:48:43.88,Default,,0000,0000,0000,,现在同学笑我  老师冤枉我  你是活该的\N{\rEng}I got blamed and laughed at. And all because of you.
+Dialogue: 0,0:48:44.08,0:48:48.14,Default,,0000,0000,0000,,你这么差劲就应该坦白  我还以为你很厉害\N{\rEng}If you're just an animal, then say so! Don't pretend you have magic powers!
+Dialogue: 0,0:48:49.99,0:48:52.55,Default,,0000,0000,0000,,但是它没有说过它很厉害啊\N{\rEng}But did it ever say that”
+Dialogue: 0,0:48:53.69,0:48:55.71,Default,,0000,0000,0000,,难道是我误会它了？\N{\rEng}did I get it wrong?
+Dialogue: 0,0:49:00.33,0:49:01.66,Default,,0000,0000,0000,,是不是我错了？\N{\rEng}Have I made a mistake?
+Dialogue: 0,0:49:01.86,0:49:03.96,Default,,0000,0000,0000,,我就知道是我错了\N{\rEng}I know I've made a mistake!
+Dialogue: 0,0:49:18.38,0:49:19.81,Default,,0000,0000,0000,,等一等\N{\rEng}Wait!
+Dialogue: 0,0:49:20.02,0:49:23.31,Default,,0000,0000,0000,,喂！  等一等\N{\rEng}Hey! Wait!
+Dialogue: 0,0:49:23.69,0:49:25.92,Default,,0000,0000,0000,,等一等\N{\rEng}Wait!
+Dialogue: 0,0:49:38.80,0:49:39.89,Default,,0000,0000,0000,,干嘛？\N{\rEng}Dicky! What's happened?
+Dialogue: 0,0:49:40.10,0:49:42.23,Default,,0000,0000,0000,,七仔不见了\N{\rEng}Cj7 has disappeared.
+Dialogue: 0,0:49:47.61,0:49:49.01,Default,,0000,0000,0000,,你看\N{\rEng}I ook.
+Dialogue: 0,0:49:54.62,0:49:55.58,Default,,0000,0000,0000,,七仔？\N{\rEng}Cj77?
+Dialogue: 0,0:49:57.62,0:49:59.42,Default,,0000,0000,0000,,对不起  我很想你\N{\rEng}I'm sorry. I missed you so much.
+Dialogue: 0,0:49:59.62,0:50:02.52,Default,,0000,0000,0000,,我以为以后再也见不到你了\N{\rEng}I thought I'd never see you again.
+Dialogue: 0,0:50:06.83,0:50:09.19,Default,,0000,0000,0000,,你不生我的气就好了\N{\rEng}And you're not angry with me.
+Dialogue: 0,0:50:12.57,0:50:14.76,Default,,0000,0000,0000,,原来你们两个认识\N{\rEng}You two already met?
+Dialogue: 0,0:50:18.04,0:50:19.47,Default,,0000,0000,0000,,这只是玩具？\N{\rEng}Is it a toy?
+Dialogue: 0,0:50:19.67,0:50:20.77,Default,,0000,0000,0000,,是啊\N{\rEng}Yes, it is.
+Dialogue: 0,0:50:23.31,0:50:25.21,Default,,0000,0000,0000,,会走会跳会眨眼睛\N{\rEng}And it can walk and move its eyes?
+Dialogue: 0,0:50:25.41,0:50:26.71,Default,,0000,0000,0000,,你从哪边拿的？\N{\rEng}Where did you get it?
+Dialogue: 0,0:50:26.92,0:50:28.54,Default,,0000,0000,0000,,同学借我玩的\N{\rEng}Someone at school lent it to me.
+Dialogue: 0,0:50:31.59,0:50:33.14,Default,,0000,0000,0000,,它的盖子呢？\N{\rEng}Where's the cover?
+Dialogue: 0,0:50:33.86,0:50:35.48,Default,,0000,0000,0000,,从哪里充电？\N{\rEng}Where do the batteries go?
+Dialogue: 0,0:50:35.69,0:50:38.39,Default,,0000,0000,0000,,不用电  是高科技\N{\rEng}It doesn't need them. It's high-tech.
+Dialogue: 0,0:50:38.76,0:50:42.32,Default,,0000,0000,0000,,这种高科技的玩具  我还真没见过\N{\rEng}I've never seen anything like it before.
+Dialogue: 0,0:50:47.57,0:50:48.70,Default,,0000,0000,0000,,你看到了没有？\N{\rEng}Did you see that?
+Dialogue: 0,0:50:48.90,0:50:49.89,Default,,0000,0000,0000,,看到\N{\rEng}Yes, I did.
+Dialogue: 0,0:50:50.11,0:50:52.04,Default,,0000,0000,0000,,弹力这么强\N{\rEng}It's all bendy.
+Dialogue: 0,0:50:52.37,0:50:54.90,Default,,0000,0000,0000,,不要弄了  还要还给同学\N{\rEng}Don't! I have to give it back soon.
+Dialogue: 0,0:50:55.11,0:50:56.34,Default,,0000,0000,0000,,怕什么\N{\rEng}It's fine.
+Dialogue: 0,0:50:56.54,0:50:59.04,Default,,0000,0000,0000,,-老爸  你干嘛？  -没事\N{\rEng}- What are you doing, dad?” - Nothing!
+Dialogue: 0,0:51:11.79,0:51:15.35,Default,,0000,0000,0000,,我就说没事  它又还原了\N{\rEng}See, I told you it'd be fine. It gets its shape back. Look!
+Dialogue: 0,0:51:15.60,0:51:16.89,Default,,0000,0000,0000,,真好玩\N{\rEng}This is fun.
+Dialogue: 0,0:51:17.10,0:51:20.36,Default,,0000,0000,0000,,不要再弄了  够了\N{\rEng}No more squeezing it! That's enough!
+Dialogue: 0,0:51:20.80,0:51:23.20,Default,,0000,0000,0000,,现在科技这么高\N{\rEng}Everything is high-tech nowadays.
+Dialogue: 0,0:51:23.41,0:51:25.67,Default,,0000,0000,0000,,我们这些没读过书的人\N{\rEng}Basically there's no future
+Dialogue: 0,0:51:25.67,0:51:27.93,Default,,0000,0000,0000,,我看这一辈子也就这个样子了\N{\rEng}for uneducated people like us.
+Dialogue: 0,0:51:29.04,0:51:33.34,Default,,0000,0000,0000,,老爸  我不想骗你  其实\N{\rEng}Dad, I don't want to lie to you, so...
+Dialogue: 0,0:51:33.55,0:51:36.71,Default,,0000,0000,0000,,七仔是你给我的那个球变出来的\N{\rEng}Cj7 came out of the ball you gave me.
+Dialogue: 0,0:51:36.92,0:51:39.22,Default,,0000,0000,0000,,它是从外太空来的\N{\rEng}It came from outer space.
+Dialogue: 0,0:51:40.89,0:51:42.88,Default,,0000,0000,0000,,我跟你说过多少次\N{\rEng}How many times do I have to tell you?
+Dialogue: 0,0:51:43.09,0:51:46.86,Default,,0000,0000,0000,,我们虽然穷  但是我们不说谎话\N{\rEng}We might be poor, but we don't lie...
+Dialogue: 0,0:51:47.06,0:51:48.79,Default,,0000,0000,0000,,也不打架\N{\rEng}We don't fight...
+Dialogue: 0,0:51:49.00,0:51:52.19,Default,,0000,0000,0000,,不属于自己的东西  我们不会拿\N{\rEng}And we don't take things that don't belong to us.
+Dialogue: 0,0:51:52.47,0:51:56.63,Default,,0000,0000,0000,,要努力读书  将来做一个有用的人才\N{\rEng}Study hard and be a useful person in the future.
+Dialogue: 0,0:52:08.62,0:52:11.11,Default,,0000,0000,0000,,好热\N{\rEng}It's so hot.
+Dialogue: 0,0:54:06.37,0:54:09.43,Default,,0000,0000,0000,,最热的这天它无缘无故地又会动了  真是幸运\N{\rEng}Well, I'll be... the hottest night and it starts to work. Lucky, or what?
+Dialogue: 0,0:54:09.64,0:54:10.63,Default,,0000,0000,0000,,我上学了\N{\rEng}I'm off to school now.
+Dialogue: 0,0:54:10.84,0:54:12.77,Default,,0000,0000,0000,,-饭盒带了没？  -带了\N{\rEng}- Have you got your lunch box? - Yes, I have.
+Dialogue: 0,0:54:12.97,0:54:15.37,Default,,0000,0000,0000,,喂  考试考得怎么样？\N{\rEng}Hey. How was the exam?
+Dialogue: 0,0:54:20.72,0:54:23.74,Default,,0000,0000,0000,,你头顶干嘛变成红色的？\N{\rEng}How come your head's gone red?
+Dialogue: 0,0:54:24.32,0:54:26.12,Default,,0000,0000,0000,,你今天好像没精打采的\N{\rEng}You don't look so good today.
+Dialogue: 0,0:54:26.32,0:54:28.79,Default,,0000,0000,0000,,是不是昨天晚上没睡好？\N{\rEng}Didn't you sleep last night?
+Dialogue: 0,0:54:33.13,0:54:34.79,Default,,0000,0000,0000,,你回去多睡会吧\N{\rEng}Get inside and go to sleep.
+Dialogue: 0,0:54:35.66,0:54:37.60,Default,,0000,0000,0000,,站住\N{\rEng}You! Stop!
+Dialogue: 0,0:54:37.80,0:54:39.53,Default,,0000,0000,0000,,你书包里面是什么东西？\N{\rEng}What's that thing inside your bag?
+Dialogue: 0,0:54:39.73,0:54:41.03,Default,,0000,0000,0000,,没有\N{\rEng}Nothing.
+Dialogue: 0,0:54:41.97,0:54:43.44,Default,,0000,0000,0000,,检查书包\N{\rEng}I need to check your schoolbag!
+Dialogue: 0,0:54:45.14,0:54:46.40,Default,,0000,0000,0000,,检查什么书包？\N{\rEng}What for?
+Dialogue: 0,0:54:46.61,0:54:48.77,Default,,0000,0000,0000,,我要查就查\N{\rEng}I don't have to tell you that.
+Dialogue: 0,0:54:53.45,0:54:55.44,Default,,0000,0000,0000,,放手\N{\rEng}Let go!
+Dialogue: 0,0:55:03.42,0:55:04.48,Default,,0000,0000,0000,,这是什么东西？\N{\rEng}What's that?
+Dialogue: 0,0:55:05.09,0:55:06.32,Default,,0000,0000,0000,,给我看看\N{\rEng}I et me see.
+Dialogue: 0,0:55:06.53,0:55:08.43,Default,,0000,0000,0000,,给我  给我看看\N{\rEng}Give it to me! Let me see first!
+Dialogue: 0,0:55:08.63,0:55:11.76,Default,,0000,0000,0000,,给我  不要拉\N{\rEng}Give it to me! Don't pull!
+Dialogue: 0,0:55:15.70,0:55:16.76,Default,,0000,0000,0000,,-抓住它  -追\N{\rEng}(Get it!
+Dialogue: 0,0:55:35.99,0:55:37.29,Default,,0000,0000,0000,,什么鬼东西啊？\N{\rEng}What is this weird thing?
+Dialogue: 0,0:55:37.49,0:55:39.43,Default,,0000,0000,0000,,别碰它  还给我！\N{\rEng}Don't touch it! Give it back to me!
+Dialogue: 0,0:55:39.63,0:55:41.06,Default,,0000,0000,0000,,拿工具箱过来\N{\rEng}(Set the tool box!
+Dialogue: 0,0:55:44.63,0:55:45.86,Default,,0000,0000,0000,,把它打开来看看\N{\rEng}Open it up and look inside.
+Dialogue: 0,0:55:46.07,0:55:47.09,Default,,0000,0000,0000,,来\N{\rEng}Here
+Dialogue: 0,0:55:48.40,0:55:50.96,Default,,0000,0000,0000,,放开它\N{\rEng}let him go!
+Dialogue: 0,0:55:51.84,0:55:53.07,Default,,0000,0000,0000,,不行\N{\rEng}Can't do it.
+Dialogue: 0,0:55:53.27,0:55:54.74,Default,,0000,0000,0000,,直接来吧\N{\rEng}Try this.
+Dialogue: 0,0:55:57.18,0:55:59.87,Default,,0000,0000,0000,,求求你  不要这样子\N{\rEng}No! Don't do that!
+Dialogue: 0,0:56:00.32,0:56:01.37,Default,,0000,0000,0000,,锯不开\N{\rEng}It's not working.
+Dialogue: 0,0:56:01.58,0:56:02.95,Default,,0000,0000,0000,,怎么可能？\N{\rEng}How is that possible?
+Dialogue: 0,0:56:17.37,0:56:18.76,Default,,0000,0000,0000,,你干嘛抢我东西？\N{\rEng}You won't do that to my thing!
+Dialogue: 0,0:56:18.97,0:56:20.33,Default,,0000,0000,0000,,又怎么样？打我啊\N{\rEng}So what”? Going to hit me?
+Dialogue: 0,0:56:20.54,0:56:22.80,Default,,0000,0000,0000,,我就打你\N{\rEng}You won't know what's hit you!
+Dialogue: 0,0:56:31.48,0:56:34.35,Default,,0000,0000,0000,,放开他\N{\rEng}Let him go!
+Dialogue: 0,0:56:43.16,0:56:44.18,Default,,0000,0000,0000,,放开他\N{\rEng}You let him go.
+Dialogue: 0,0:56:44.39,0:56:46.12,Default,,0000,0000,0000,,你先放开我\N{\rEng}You let me go first.
+Dialogue: 0,0:57:31.84,0:57:33.64,Default,,0000,0000,0000,,我不想打架\N{\rEng}I don't want a fight.
+Dialogue: 0,0:57:54.26,0:57:55.92,Default,,0000,0000,0000,,不要逼我！\N{\rEng}Don't force me to do this!
+Dialogue: 0,0:58:21.79,0:58:22.85,Default,,0000,0000,0000,,你没事吧？\N{\rEng}Are you okay?
+Dialogue: 0,0:58:23.06,0:58:25.42,Default,,0000,0000,0000,,我没事  谢谢\N{\rEng}I'm fine. Thank you.
+Dialogue: 0,0:58:25.96,0:58:27.05,Default,,0000,0000,0000,,不用谢\N{\rEng}You're welcome.
+Dialogue: 0,0:58:27.26,0:58:28.69,Default,,0000,0000,0000,,你们干嘛？\N{\rEng}What's going on here?
+Dialogue: 0,0:58:30.87,0:58:33.43,Default,,0000,0000,0000,,你们为什么打架？说！\N{\rEng}Why were you fighting? Tell me!
+Dialogue: 0,0:58:34.77,0:58:37.64,Default,,0000,0000,0000,,不说就全罚站\N{\rEng}You're going to stand here until you tell me!
+Dialogue: 0,0:58:42.71,0:58:44.01,Default,,0000,0000,0000,,七仔！\N{\rEng}Cj7!
+Dialogue: 0,0:58:47.58,0:58:49.21,Default,,0000,0000,0000,,我就知道你没事\N{\rEng}I knew you'd be okay!
+Dialogue: 0,0:58:49.42,0:58:50.91,Default,,0000,0000,0000,,不要这样\N{\rEng}Stop. Don't.
+Dialogue: 0,0:58:51.12,0:58:52.09,Default,,0000,0000,0000,,乖\N{\rEng}Good boy.
+Dialogue: 0,0:58:52.29,0:58:54.58,Default,,0000,0000,0000,,喂  这到底是什么啊？\N{\rEng}What is that thing”?
+Dialogue: 0,0:58:54.79,0:58:56.59,Default,,0000,0000,0000,,你看  七仔  坐下\N{\rEng}Look! Cj7, sit!
+Dialogue: 0,0:58:58.96,0:59:00.22,Default,,0000,0000,0000,,好聪明\N{\rEng}That's cool.
+Dialogue: 0,0:59:00.43,0:59:02.12,Default,,0000,0000,0000,,它还会干些什么？\N{\rEng}What else does it do?
+Dialogue: 0,0:59:02.33,0:59:03.73,Default,,0000,0000,0000,,七仔  高兴！\N{\rEng}Cj7, happy face!
+Dialogue: 0,0:59:04.63,0:59:05.93,Default,,0000,0000,0000,,生气！\N{\rEng}Angry face!
+Dialogue: 0,0:59:06.90,0:59:07.87,Default,,0000,0000,0000,,伤心！\N{\rEng}Sad face!
+Dialogue: 0,0:59:10.91,0:59:11.93,Default,,0000,0000,0000,,看到美女！\N{\rEng}Saw a pretty lady!
+Dialogue: 0,0:59:13.67,0:59:15.23,Default,,0000,0000,0000,,家里着火！\N{\rEng}Your apartment's on fire.
+Dialogue: 0,0:59:16.94,0:59:18.54,Default,,0000,0000,0000,,中了彩票！\N{\rEng}But you just won the lottery!
+Dialogue: 0,0:59:19.58,0:59:21.45,Default,,0000,0000,0000,,全家死光！\N{\rEng}Oops! The whole family is dead.
+Dialogue: 0,0:59:23.18,0:59:25.02,Default,,0000,0000,0000,,考试一百分！\N{\rEng}You've got 100 on the exam!
+Dialogue: 0,0:59:28.16,0:59:29.49,Default,,0000,0000,0000,,好厉害\N{\rEng}Wicked
+Dialogue: 0,0:59:29.69,0:59:30.71,Default,,0000,0000,0000,,你看\N{\rEng}I ook!
+Dialogue: 0,0:59:36.60,0:59:39.53,Default,,0000,0000,0000,,哇！放烟花！\N{\rEng}Wow, fireworks!
+Dialogue: 0,0:59:41.07,0:59:42.87,Default,,0000,0000,0000,,你的玩具到底在哪里买的？\N{\rEng}Where did you get it?
+Dialogue: 0,0:59:43.07,0:59:44.66,Default,,0000,0000,0000,,对  我也想买一个\N{\rEng}I want one too.
+Dialogue: 0,0:59:44.87,0:59:46.17,Default,,0000,0000,0000,,这个是秘密\N{\rEng}I can't tell you that.
+Dialogue: 0,0:59:46.37,0:59:47.95,Default,,0000,0000,0000,,不过我还是要谢谢你\N{\rEng}But I want to thank you
+Dialogue: 0,0:59:47.95,0:59:49.54,Default,,0000,0000,0000,,没有把这件事情告诉曹主任\N{\rEng}for not telling Mr. cao about this.
+Dialogue: 0,0:59:49.74,0:59:50.73,Default,,0000,0000,0000,,那当然了\N{\rEng}Of course not!
+Dialogue: 0,0:59:50.95,0:59:53.38,Default,,0000,0000,0000,,小孩子的事情  才不告诉大人呢\N{\rEng}We don't discuss our business with adults.
+Dialogue: 0,0:59:53.58,0:59:54.88,Default,,0000,0000,0000,,-一言为定  -一言为定！\N{\rEng}- You have my word! - You have my word!
+Dialogue: 0,0:59:57.39,1:00:00.91,Default,,0000,0000,0000,,你真的满厉害的  要不要加入我们柔道队？\N{\rEng}Hey, you're amazing. Do you want to be on our judo team?
+Dialogue: 0,1:00:01.12,1:00:03.06,Default,,0000,0000,0000,,不用了  他们都笑我\N{\rEng}They'd all make fun of me.
+Dialogue: 0,1:00:03.26,1:00:04.92,Default,,0000,0000,0000,,谁还敢笑你\N{\rEng}They wouldn't dare.
+Dialogue: 0,1:00:05.13,1:00:06.89,Default,,0000,0000,0000,,你们还会笑她吗？\N{\rEng}Would you make fun of her?
+Dialogue: 0,1:00:26.61,1:00:29.78,Default,,0000,0000,0000,,你看  我儿子考试拿了一百分\N{\rEng}Look at this. My son got 100 on his exam.
+Dialogue: 0,1:00:29.98,1:00:31.04,Default,,0000,0000,0000,,你孩子真了不起\N{\rEng}That's a great kid!
+Dialogue: 0,1:00:31.25,1:00:32.45,Default,,0000,0000,0000,,对\N{\rEng}Yes!
+Dialogue: 0,1:00:34.72,1:00:36.45,Default,,0000,0000,0000,,-你看  -滚开\N{\rEng}- Look! - Get away!
+Dialogue: 0,1:00:36.66,1:00:38.39,Default,,0000,0000,0000,,他拿了一百分\N{\rEng}He got 100.
+Dialogue: 0,1:00:40.09,1:00:43.96,Default,,0000,0000,0000,,老板  我儿子考试真的拿一百分了\N{\rEng}Boss. My kid got 100 on his exam.
+Dialogue: 0,1:00:44.43,1:00:46.20,Default,,0000,0000,0000,,他一定是作弊\N{\rEng}So he cheated.
+Dialogue: 0,1:00:50.07,1:00:51.47,Default,,0000,0000,0000,,你为什么这么说？\N{\rEng}What makes you say that?
+Dialogue: 0,1:00:51.67,1:00:54.57,Default,,0000,0000,0000,,我儿子这么聪明  他作弊才考到六十分\N{\rEng}My son's really smart, but even he can't pass without cheating.
+Dialogue: 0,1:00:54.78,1:00:57.57,Default,,0000,0000,0000,,你儿子考一百分没有作弊？  谁信啊？贱骨头\N{\rEng}So how can your son get 1007? Hard to believe, dickhead.
+Dialogue: 0,1:00:57.78,1:00:59.64,Default,,0000,0000,0000,,你胡说吧\N{\rEng}You're not serious.
+Dialogue: 0,1:01:02.12,1:01:04.36,Default,,0000,0000,0000,,墨水的颜色不一样  明明是零分\N{\rEng}Look at the ink. He got zero
+Dialogue: 0,1:01:04.36,1:01:06.61,Default,,0000,0000,0000,,自己改成一百分的  骗谁啊\N{\rEng}and changed it to 100. He's a liar.
+Dialogue: 0,1:01:07.99,1:01:11.45,Default,,0000,0000,0000,,但是我认识他这么久  他不像是这种人\N{\rEng}But he's not like that. I know him better.
+Dialogue: 0,1:01:11.66,1:01:12.89,Default,,0000,0000,0000,,你儿子作弊\N{\rEng}Your son cheated.
+Dialogue: 0,1:01:13.09,1:01:14.99,Default,,0000,0000,0000,,-我不准你这么说他  -你儿子作弊！\N{\rEng}- I can't let you say that. - He cheated!
+Dialogue: 0,1:01:15.20,1:01:16.96,Default,,0000,0000,0000,,你再说我打你\N{\rEng}I'll hit you if you say that again.
+Dialogue: 0,1:01:17.70,1:01:19.06,Default,,0000,0000,0000,,你儿子作弊\N{\rEng}Your son cheated.
+Dialogue: 0,1:01:19.27,1:01:21.76,Default,,0000,0000,0000,,你打我？\N{\rEng}You hit me? Just you try!
+Dialogue: 0,1:01:33.45,1:01:35.78,Default,,0000,0000,0000,,你儿子作弊  你打我？\N{\rEng}Your son cheated! You hit me?
+Dialogue: 0,1:01:35.98,1:01:37.92,Default,,0000,0000,0000,,你以后不用上班了\N{\rEng}You're fired!
+Dialogue: 0,1:01:38.22,1:01:39.85,Default,,0000,0000,0000,,你儿子作弊！\N{\rEng}Your son cheated!
+Dialogue: 0,1:02:03.64,1:02:04.98,Default,,0000,0000,0000,,快进去\N{\rEng}Quick!
+Dialogue: 0,1:02:05.41,1:02:06.68,Default,,0000,0000,0000,,进去\N{\rEng}(Set inside.
+Dialogue: 0,1:02:10.65,1:02:13.85,Default,,0000,0000,0000,,你老老实实告诉我  你考试是不是作弊？\N{\rEng}Tell the truth. Did you cheat on your exam?
+Dialogue: 0,1:02:14.22,1:02:15.19,Default,,0000,0000,0000,,没有\N{\rEng}No, I didn't.
+Dialogue: 0,1:02:15.39,1:02:19.55,Default,,0000,0000,0000,,你考了零鸭蛋  结果自己改成一百分  是不是？\N{\rEng}I think you got zero, then altered it to 100. Is that right?
+Dialogue: 0,1:02:22.10,1:02:23.29,Default,,0000,0000,0000,,是\N{\rEng}Yes
+Dialogue: 0,1:02:23.76,1:02:27.50,Default,,0000,0000,0000,,我改了分又不是作弊  就是怕你不高兴\N{\rEng}but that's not the same as cheating. I didn't want you to be disappointed.
+Dialogue: 0,1:02:27.70,1:02:29.19,Default,,0000,0000,0000,,你有没有搞错？\N{\rEng}What's wrong with you?
+Dialogue: 0,1:02:29.40,1:02:32.34,Default,,0000,0000,0000,,我供你读书  很辛苦的\N{\rEng}It's so tough to send you to that school.
+Dialogue: 0,1:02:33.67,1:02:35.04,Default,,0000,0000,0000,,对不起  老爸\N{\rEng}I'm sorry, dad.
+Dialogue: 0,1:02:35.38,1:02:38.00,Default,,0000,0000,0000,,我跟你说了多少次  我们虽然穷\N{\rEng}I'll say it again. Even though we're poor...
+Dialogue: 0,1:02:38.21,1:02:39.58,Default,,0000,0000,0000,,啊呀！  我知道了\N{\rEng}Okay! I know!
+Dialogue: 0,1:02:39.78,1:02:42.87,Default,,0000,0000,0000,,你好烦  别再说这些了好不好？\N{\rEng}You're so annoying. Can you stop going on about it?
+Dialogue: 0,1:02:44.89,1:02:47.85,Default,,0000,0000,0000,,反正都已经改了  你能怎么样？\N{\rEng}I changed it. So what?
+Dialogue: 0,1:03:06.44,1:03:09.10,Default,,0000,0000,0000,,没什么事  我就走了\N{\rEng}If there's nothing else, I'm leaving.
+Dialogue: 0,1:03:13.65,1:03:16.34,Default,,0000,0000,0000,,干嘛？\N{\rEng}What are you doing?
+Dialogue: 0,1:03:16.55,1:03:17.92,Default,,0000,0000,0000,,你想怎么样？\N{\rEng}Why are you taking my things?
+Dialogue: 0,1:03:18.12,1:03:21.05,Default,,0000,0000,0000,,你不用心读书  我不准你再跟它玩\N{\rEng}If you can't work hard, then you don't get to play.
+Dialogue: 0,1:03:21.26,1:03:22.95,Default,,0000,0000,0000,,-还给我  -不给\N{\rEng}- Give it back to me! - No_
+Dialogue: 0,1:03:23.16,1:03:24.78,Default,,0000,0000,0000,,你凭什么拿我东西？\N{\rEng}Why are you taking my stuff?
+Dialogue: 0,1:03:24.99,1:03:28.12,Default,,0000,0000,0000,,凭什么？  就凭我是你老爸  行不行？\N{\rEng}Why"? Because I'm your father! And I can!
+Dialogue: 0,1:03:28.33,1:03:31.30,Default,,0000,0000,0000,,那你就是以大欺小  我没你这种老爸\N{\rEng}You're bullying me. I don't have a dad like youl!
+Dialogue: 0,1:03:31.50,1:03:33.93,Default,,0000,0000,0000,,你总是拿零鸭蛋  我还没你这种儿子\N{\rEng}You always get zeros. I don't have a son like you.
+Dialogue: 0,1:03:34.14,1:03:35.80,Default,,0000,0000,0000,,我不要你管我\N{\rEng}I eave me alone!
+Dialogue: 0,1:03:36.00,1:03:37.23,Default,,0000,0000,0000,,你再说一次\N{\rEng}Say it again!
+Dialogue: 0,1:03:37.44,1:03:39.74,Default,,0000,0000,0000,,我永远都不要你管我\N{\rEng}I eave me alone forever!
+Dialogue: 0,1:03:39.94,1:03:41.31,Default,,0000,0000,0000,,好\N{\rEng}Okay!
+Dialogue: 0,1:03:42.24,1:03:44.02,Default,,0000,0000,0000,,你有能耐就凭真本事\N{\rEng}If you can use your own
+Dialogue: 0,1:03:44.02,1:03:45.80,Default,,0000,0000,0000,,考一个六十分回来给我看看\N{\rEng}brains to get over 60...
+Dialogue: 0,1:03:46.01,1:03:47.71,Default,,0000,0000,0000,,那我就永远不管你\N{\rEng}Then I'll leave you alone forever!
+Dialogue: 0,1:03:47.92,1:03:49.44,Default,,0000,0000,0000,,-你说的  -我说的！\N{\rEng}- It's a deal! - It's a deal!
+Dialogue: 0,1:03:49.68,1:03:52.38,Default,,0000,0000,0000,,我就考给你看  到时候不要赖皮\N{\rEng}I'm going to get that grade. Just watch me!
+Dialogue: 0,1:03:52.59,1:03:55.82,Default,,0000,0000,0000,,少吹了  考试不是靠嘴巴  零鸭蛋\N{\rEng}We'll see about that, zero hero!
+Dialogue: 0,1:03:56.02,1:03:59.29,Default,,0000,0000,0000,,你不要那么嚣张  我一定考给你看\N{\rEng}That's not fair! I'll show you!
+Dialogue: 0,1:03:59.49,1:04:01.89,Default,,0000,0000,0000,,你永远都不要再管我\N{\rEng}Don't bother me anymore!
+Dialogue: 0,1:04:06.63,1:04:08.26,Default,,0000,0000,0000,,你看什么看\N{\rEng}What are you looking at?
+Dialogue: 0,1:04:19.85,1:04:21.31,Default,,0000,0000,0000,,-周先生  -袁老师\N{\rEng}- Mr. chow. - Miss yuen.
+Dialogue: 0,1:04:21.52,1:04:23.61,Default,,0000,0000,0000,,-有什么事吗？先进来说  -不要了\N{\rEng}- Is something wrong? Please come in. - I won't, thanks.
+Dialogue: 0,1:04:23.82,1:04:26.91,Default,,0000,0000,0000,,小迪忘了带饭  你可以帮我交给他吗？\N{\rEng}But dicky forgot his lunch box today. Could you see that he gets it?
+Dialogue: 0,1:04:27.12,1:04:29.32,Default,,0000,0000,0000,,好  你先进来吧  我叫他们开门\N{\rEng}Sure. Let me ask someone to open the gate.
+Dialogue: 0,1:04:29.52,1:04:33.52,Default,,0000,0000,0000,,不用  我这个样子给人看见了  我怕同学会笑他\N{\rEng}No, please don't. If his classmates see me, he'll never live it down.
+Dialogue: 0,1:04:33.73,1:04:34.69,Default,,0000,0000,0000,,怎么会呢？\N{\rEng}How come?
+Dialogue: 0,1:04:34.90,1:04:36.45,Default,,0000,0000,0000,,-我先走了  -等一下\N{\rEng}I have to go. “Wait.
+Dialogue: 0,1:04:37.80,1:04:40.29,Default,,0000,0000,0000,,小迪都和我说了\N{\rEng}Dicky told me everything.
+Dialogue: 0,1:04:40.50,1:04:42.59,Default,,0000,0000,0000,,他只是闹闹别扭\N{\rEng}He was just being temperamental.
+Dialogue: 0,1:04:42.80,1:04:45.93,Default,,0000,0000,0000,,如果你不介意的话  今天晚上让他和我回家\N{\rEng}If you'd allow it, he could come to my house after school.
+Dialogue: 0,1:04:46.14,1:04:48.01,Default,,0000,0000,0000,,我会和他好好谈一谈\N{\rEng}We can talk about what happened.
+Dialogue: 0,1:04:48.34,1:04:51.21,Default,,0000,0000,0000,,正好明天考试也可以帮他温习功课\N{\rEng}And there's another exam tomorrow, so I can help him to review.
+Dialogue: 0,1:04:51.41,1:04:52.61,Default,,0000,0000,0000,,觉得呢？\N{\rEng}What do you think?
+Dialogue: 0,1:04:53.11,1:04:54.24,Default,,0000,0000,0000,,那太感谢你了\N{\rEng}Oh, thank you. Thank you!
+Dialogue: 0,1:04:54.45,1:04:57.42,Default,,0000,0000,0000,,-不客气  没什么的  -不  我真的很感谢你\N{\rEng}- You're welcome. It's nothing at all. - I appreciate this so much.
+Dialogue: 0,1:04:57.62,1:05:00.38,Default,,0000,0000,0000,,-这真的没什么的  只是小事情  -不是小事情\N{\rEng}- It's just a small thing. Nothing, really. - It's not nothing.
+Dialogue: 0,1:05:00.59,1:05:01.71,Default,,0000,0000,0000,,因为我\N{\rEng}The thing is...
+Dialogue: 0,1:05:01.92,1:05:05.55,Default,,0000,0000,0000,,自己没有能力给他什么  心里一直都很内疚\N{\rEng}I can't give him very much myself, and that makes me feel very guilty.
+Dialogue: 0,1:05:05.76,1:05:09.89,Default,,0000,0000,0000,,现在你肯这样帮忙  我真的不知道该怎么报答你\N{\rEng}But if you were to help him study, I could never repay you.
+Dialogue: 0,1:05:10.26,1:05:13.20,Default,,0000,0000,0000,,你不用报答我什么  这是我应该做的\N{\rEng}You really don't have to. It's the least I can do.
+Dialogue: 0,1:05:14.20,1:05:15.83,Default,,0000,0000,0000,,那小迪我就交给你了\N{\rEng}Then I'll leave him in your hands.
+Dialogue: 0,1:05:16.27,1:05:18.07,Default,,0000,0000,0000,,好  你放心交给我吧\N{\rEng}Sure. You just leave dicky to me.
+Dialogue: 0,1:05:18.44,1:05:21.03,Default,,0000,0000,0000,,-谢谢  -不客气\N{\rEng}Thank you. You're welcome.
+Dialogue: 0,1:05:56.04,1:05:58.03,Default,,0000,0000,0000,,今天老板脾气好吗？\N{\rEng}How's the boss feeling today?
+Dialogue: 0,1:05:58.25,1:05:59.61,Default,,0000,0000,0000,,你还敢回来啊？\N{\rEng}You dare to come back?
+Dialogue: 0,1:05:59.81,1:06:01.28,Default,,0000,0000,0000,,我要吃饭啊\N{\rEng}I have to. I need to eat.
+Dialogue: 0,1:06:23.40,1:06:26.93,Default,,0000,0000,0000,,我知道我口臭  反正是同乡  就这么算了\N{\rEng}I know I have a big mouth, but I think we understand each other.
+Dialogue: 0,1:06:27.14,1:06:28.13,Default,,0000,0000,0000,,什么？\N{\rEng}What?
+Dialogue: 0,1:06:28.34,1:06:30.24,Default,,0000,0000,0000,,我不应该当着那么多人面说你儿子\N{\rEng}I shouldn't have said that about your son.
+Dialogue: 0,1:06:30.24,1:06:32.14,Default,,0000,0000,0000,,收一下这红包算了\N{\rEng}Let's forget it. Here.
+Dialogue: 0,1:06:33.25,1:06:34.71,Default,,0000,0000,0000,,这\N{\rEng}Well
+Dialogue: 0,1:06:35.25,1:06:37.48,Default,,0000,0000,0000,,-但是他真的作弊  -谁不作弊啊？\N{\rEng}- but he really did cheat. - Who doesn't, sometimes?
+Dialogue: 0,1:06:37.69,1:06:40.28,Default,,0000,0000,0000,,你儿子这么聪明  将来一定出人头地\N{\rEng}The kid is very smart. I know he'll be successful
+Dialogue: 0,1:06:40.49,1:06:42.65,Default,,0000,0000,0000,,要是那样就谢天谢地了\N{\rEng}I pray to god that you're right.
+Dialogue: 0,1:06:42.86,1:06:44.79,Default,,0000,0000,0000,,拿去给他买东西吃吧\N{\rEng}So take it and buy him some candy.
+Dialogue: 0,1:06:44.99,1:06:46.29,Default,,0000,0000,0000,,你不用给那么多\N{\rEng}Hey! This is far too much.
+Dialogue: 0,1:06:46.49,1:06:49.93,Default,,0000,0000,0000,,行了  给他交书本费  交学费好了  赶快开工\N{\rEng}Use it for books, then. Or school fees. But now get back to work.
+Dialogue: 0,1:06:56.27,1:06:58.00,Default,,0000,0000,0000,,今天我走运了\N{\rEng}Today must be my lucky day.
+Dialogue: 0,1:08:27.86,1:08:30.26,Default,,0000,0000,0000,,想不到你能及格\N{\rEng}I thought you'd never pass.
+Dialogue: 0,1:08:32.93,1:08:33.90,Default,,0000,0000,0000,,很好\N{\rEng}(Ood.
+Dialogue: 0,1:08:34.60,1:08:35.69,Default,,0000,0000,0000,,谢谢曹主任\N{\rEng}Thanks, Mr. cao.
+Dialogue: 0,1:08:35.90,1:08:37.60,Default,,0000,0000,0000,,干嘛？\N{\rEng}What's happening?
+Dialogue: 0,1:08:38.31,1:08:39.74,Default,,0000,0000,0000,,安全带\N{\rEng}Where's your safety belt?
+Dialogue: 0,1:09:12.67,1:09:13.97,Default,,0000,0000,0000,,干嘛？\N{\rEng}What's going on here?
+Dialogue: 0,1:09:16.84,1:09:18.97,Default,,0000,0000,0000,,救命\N{\rEng}Help!
+Dialogue: 0,1:09:20.51,1:09:22.31,Default,,0000,0000,0000,,把手伸过来\N{\rEng}Give me your hand!
+Dialogue: 0,1:09:22.52,1:09:26.45,Default,,0000,0000,0000,,小心点  伸过来\N{\rEng}Reach out! Give me your hand!
+Dialogue: 0,1:09:30.49,1:09:33.79,Default,,0000,0000,0000,,干嘛还不搬过去？快点\N{\rEng}Why haven't these been moved?
+Dialogue: 0,1:09:34.19,1:09:36.56,Default,,0000,0000,0000,,干什么？小心点\N{\rEng}What was that”? Hey! Be careful!
+Dialogue: 0,1:09:48.84,1:09:50.50,Default,,0000,0000,0000,,对不起\N{\rEng}I'm so sorry.
+Dialogue: 0,1:09:51.71,1:09:54.24,Default,,0000,0000,0000,,小迪  你出来一下\N{\rEng}Dicky, you have to come with me.
+Dialogue: 0,1:11:10.22,1:11:12.89,Default,,0000,0000,0000,,小迪  这里就是你家？\N{\rEng}Is this your house, dicky?
+Dialogue: 0,1:11:17.43,1:11:19.83,Default,,0000,0000,0000,,你胜子饿不饿  要不要吃东西？\N{\rEng}Are you hungry? Do you want to eat?
+Dialogue: 0,1:11:32.45,1:11:35.90,Default,,0000,0000,0000,,小迪  老师要告诉你一件事情\N{\rEng}Dicky, I'm going to tell you something.
+Dialogue: 0,1:11:44.39,1:11:48.38,Default,,0000,0000,0000,,你爸爸他出意外去世了\N{\rEng}There was a terrible accident, and your dad passed away.
+Dialogue: 0,1:12:10.28,1:12:14.72,Default,,0000,0000,0000,,小迪  有很多事情是人不能控制的  你知道吗？\N{\rEng}There are some things we can't control. Do you understand?
+Dialogue: 0,1:12:15.46,1:12:18.42,Default,,0000,0000,0000,,老师  你不要说了  我要睡觉了\N{\rEng}Don't talk anymore, miss. I want to sleep.
+Dialogue: 0,1:12:18.63,1:12:20.32,Default,,0000,0000,0000,,你先回去\N{\rEng}Please leave me.
+Dialogue: 0,1:12:20.86,1:12:23.96,Default,,0000,0000,0000,,小迪\N{\rEng}Dicky, open the door.
+Dialogue: 0,1:12:24.33,1:12:25.32,Default,,0000,0000,0000,,对不起\N{\rEng}I'm sorry.
+Dialogue: 0,1:12:25.53,1:12:26.83,Default,,0000,0000,0000,,袁老师\N{\rEng}Miss yuen.
+Dialogue: 0,1:12:29.04,1:12:30.77,Default,,0000,0000,0000,,我很累了\N{\rEng}I'm very tired.
+Dialogue: 0,1:12:32.54,1:12:36.27,Default,,0000,0000,0000,,我真的要睡觉了\N{\rEng}I need to sleep.
+Dialogue: 0,1:12:38.88,1:12:40.31,Default,,0000,0000,0000,,小迪\N{\rEng}Dicky.
+Dialogue: 0,1:12:42.22,1:12:45.34,Default,,0000,0000,0000,,老爸他不会不理我的\N{\rEng}My dad won't leave me alone.
+Dialogue: 0,1:12:47.19,1:12:51.85,Default,,0000,0000,0000,,等我睡醒之后  他就会回来的\N{\rEng}He'll be home when I wake up.
+Dialogue: 0,1:12:53.06,1:12:55.49,Default,,0000,0000,0000,,我要睡觉了\N{\rEng}I need to sleep now.
+Dialogue: 0,1:12:59.20,1:13:00.60,Default,,0000,0000,0000,,小迪\N{\rEng}Dicky.
+Dialogue: 0,1:13:14.21,1:13:15.88,Default,,0000,0000,0000,,爸爸\N{\rEng}Dad.
+Dialogue: 0,1:16:10.59,1:16:12.46,Default,,0000,0000,0000,,为什么不换衣服睡觉？\N{\rEng}Why aren't you in your pajamas?
+Dialogue: 0,1:16:26.37,1:16:27.64,Default,,0000,0000,0000,,怎么了？\N{\rEng}Hey. What's up?
+Dialogue: 0,1:16:28.78,1:16:32.51,Default,,0000,0000,0000,,爸爸  你不要不管我\N{\rEng}Dad, don't ever leave me.
+Dialogue: 0,1:16:37.35,1:16:39.61,Default,,0000,0000,0000,,我以后会听话的\N{\rEng}I'll listen to you...
+Dialogue: 0,1:16:39.89,1:16:41.68,Default,,0000,0000,0000,,我要好好读书\N{\rEng}I'll study hard...
+Dialogue: 0,1:16:41.89,1:16:43.12,Default,,0000,0000,0000,,不吹牛\N{\rEng}Won't lie
+Dialogue: 0,1:16:43.32,1:16:44.76,Default,,0000,0000,0000,,不打架\N{\rEng}I won't fight...
+Dialogue: 0,1:16:44.96,1:16:48.45,Default,,0000,0000,0000,,将来做一个对社会有用的人\N{\rEng}And one day I'll be a really useful person.
+Dialogue: 0,1:16:49.96,1:16:51.33,Default,,0000,0000,0000,,那就乖\N{\rEng}That's good.
+Dialogue: 0,1:17:11.08,1:17:12.38,Default,,0000,0000,0000,,七仔！\N{\rEng}Cj7!
+Dialogue: 0,1:17:13.85,1:17:15.55,Default,,0000,0000,0000,,你好吗？\N{\rEng}How are you?
+Dialogue: 0,1:17:21.33,1:17:22.96,Default,,0000,0000,0000,,这是什么声音？\N{\rEng}What's that noise?
+Dialogue: 0,1:17:23.20,1:17:24.96,Default,,0000,0000,0000,,我也不知道\N{\rEng}Yeah, what is it?
+Dialogue: 0,1:17:26.43,1:17:27.83,Default,,0000,0000,0000,,你干嘛这么累？\N{\rEng}Why are you so tired, cj7?
+Dialogue: 0,1:18:21.76,1:18:23.75,Default,,0000,0000,0000,,老爸  它怎么回事？\N{\rEng}What's happened to him, dad?
+Dialogue: 0,1:18:24.26,1:18:25.75,Default,,0000,0000,0000,,会不会没电了？\N{\rEng}Maybe the batteries have run out.
+Dialogue: 0,1:18:25.96,1:18:27.86,Default,,0000,0000,0000,,没电怎么会这样子\N{\rEng}It wouldn't look like that!
+Dialogue: 0,1:18:28.06,1:18:29.86,Default,,0000,0000,0000,,高科技嘛\N{\rEng}But it's very high-tech.
+Dialogue: 0,1:20:05.03,1:20:06.86,Default,,0000,0000,0000,,新学期又要开始了\N{\rEng}The new term starts soon..
+Dialogue: 0,1:20:07.06,1:20:09.72,Default,,0000,0000,0000,,学校特地在开学前搞了个旅行\N{\rEng}And we have a picnic before going back.
+Dialogue: 0,1:20:09.93,1:20:12.06,Default,,0000,0000,0000,,同学们都很开心\N{\rEng}Everybody's very happy.
+Dialogue: 0,1:20:12.40,1:20:14.70,Default,,0000,0000,0000,,暴龙同学不再打架了\N{\rEng}Storm dragon doesn't fight anymore...
+Dialogue: 0,1:20:14.90,1:20:17.23,Default,,0000,0000,0000,,因为他喜欢上了一个人\N{\rEng}Because he's fallen in love.
+Dialogue: 0,1:20:25.85,1:20:28.21,Default,,0000,0000,0000,,但美娇却喜欢我\N{\rEng}Maggie likes me best...
+Dialogue: 0,1:20:36.69,1:20:39.59,Default,,0000,0000,0000,,其实我爱的人是小芬女\N{\rEng}But my love is Fanny.
+Dialogue: 0,1:20:41.63,1:20:43.49,Default,,0000,0000,0000,,小芬女也很爱我的\N{\rEng}And she loves me very much too!
+Dialogue: 0,1:20:49.60,1:20:51.54,Default,,0000,0000,0000,,蛋塔头总是抢我东西\N{\rEng}Johnny always takes what's mine.
+Dialogue: 0,1:20:51.74,1:20:54.87,Default,,0000,0000,0000,,我就告诉老师  看你们能好多久\N{\rEng}Maybe he'll stop when I tell the teacher about him.
+Dialogue: 0,1:20:57.11,1:21:00.20,Default,,0000,0000,0000,,同学们心里面都有自己喜欢的人\N{\rEng}Every pupil has his own true love.
+Dialogue: 0,1:21:00.41,1:21:02.38,Default,,0000,0000,0000,,我爸爸也不例外\N{\rEng}And so has my dad.
+Dialogue: 0,1:21:16.23,1:21:18.39,Default,,0000,0000,0000,,真是太神奇了  上次我明明\N{\rEng}It's just amazing. When we saw you
+Dialogue: 0,1:21:18.39,1:21:20.56,Default,,0000,0000,0000,,看见你躺在医院里面已经\N{\rEng}in the hospital you appeared to be quite...
+Dialogue: 0,1:21:20.77,1:21:22.83,Default,,0000,0000,0000,,已经死了嘛  但是后来又没事了\N{\rEng}Dead, yes. But now I'm right as rain.
+Dialogue: 0,1:21:22.83,1:21:24.90,Default,,0000,0000,0000,,我自己都不明白  医生也解释不了\N{\rEng}Not even the doctors can explain it.
+Dialogue: 0,1:21:25.11,1:21:27.30,Default,,0000,0000,0000,,那你现在觉得自己身体怎么样？\N{\rEng}And how have you been since then?
+Dialogue: 0,1:21:27.51,1:21:29.30,Default,,0000,0000,0000,,我最近身体有点问题\N{\rEng}Well, I do have a bit of a problem.
+Dialogue: 0,1:21:29.51,1:21:30.98,Default,,0000,0000,0000,,什么样的问题？\N{\rEng}What kind of problem?
+Dialogue: 0,1:21:31.18,1:21:33.20,Default,,0000,0000,0000,,我觉得我好英俊\N{\rEng}I'm far too handsome.
+Dialogue: 0,1:21:36.42,1:21:38.04,Default,,0000,0000,0000,,满好笑的\N{\rEng}Very funny.
+Dialogue: 0,1:21:39.95,1:21:41.42,Default,,0000,0000,0000,,我是说真的\N{\rEng}I mean it.
+Dialogue: 0,1:21:44.69,1:21:46.99,Default,,0000,0000,0000,,让人喜欢自己不是很容易\N{\rEng}It's not easy to win a girl over...
+Dialogue: 0,1:21:47.19,1:21:49.32,Default,,0000,0000,0000,,但老爸是不会放弃的\N{\rEng}Especially if you're not that funny.
+Dialogue: 0,1:21:49.53,1:21:51.12,Default,,0000,0000,0000,,他是我的大英雄\N{\rEng}But dad won't give up. He's my hero.
+Dialogue: 0,1:21:51.33,1:21:55.83,Default,,0000,0000,0000,,袁老师  你敢说我不英俊吗？  你再看清楚一点\N{\rEng}You don't think I'm handsome, miss yuen? You can't be serious.
+Dialogue: 0,1:22:01.71,1:22:03.57,Default,,0000,0000,0000,,还有你  七仔\N{\rEng}I'm so lucky that I still have you, cj7.
+Dialogue: 0,1:22:03.81,1:22:05.61,Default,,0000,0000,0000,,自从你睡觉后\N{\rEng}Every day, while you sleep...
+Dialogue: 0,1:22:05.81,1:22:08.44,Default,,0000,0000,0000,,我每天都会先闭上眼睛数三声\N{\rEng}I close my eyes and count to three
+Dialogue: 0,1:22:08.65,1:22:12.18,Default,,0000,0000,0000,,希望睁开眼睛  就会看见你醒过来\N{\rEng}hoping when I look again, you'll wake.
+Dialogue: 0,1:22:12.89,1:22:16.34,Default,,0000,0000,0000,,我那么有诚意  你就醒一醒吧\N{\rEng}I want you back so much. Where are you, cj77?
+Dialogue: 0,1:22:19.39,1:22:23.16,Default,,0000,0000,0000,,一  二  三\N{\rEng}One, two, three...
