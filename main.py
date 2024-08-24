@@ -16,7 +16,7 @@ register_coco_instances(Data_Resister_valid, {}, "./coco-data/val.json", dataDir
 metadata = MetadataCatalog.get(Data_Resister_training)
 dataset_train = DatasetCatalog.get(Data_Resister_training)
 dataset_valid = DatasetCatalog.get(Data_Resister_valid)
-print("类别名称: ", metadata.thing_classes)
+print("class name in detectron2: ", metadata.thing_classes)
 # --------------
 
 import cv2, os
