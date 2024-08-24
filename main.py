@@ -4,6 +4,7 @@ from pathlib import Path
 Data_Resister_training = "coincide_separation_train"
 Data_Resister_valid = "coincide_separation_valid"
 from detectron2.data.datasets import register_coco_instances
+from save_data import save_data
 
 dataDir_train = Path("./coco-data/images")
 
@@ -86,10 +87,8 @@ out_video = cv2.VideoWriter(
     fps,
     (frame_width, frame_height),
 )
-# 创建保存图像的文件夹
 output_image_dir = "result_ini"
 os.makedirs(output_image_dir, exist_ok=True)
-# 打开 result_ini.txt 文件用于写入检测结果
 with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
     frame_count = 0
 
@@ -147,8 +146,7 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
                     "predict result:",
                     f"Frame {frame_count}: ID {int(track_id)}, Class: {class_name}, Box [{x1}, {y1}, {x2}, {y2}]\n",
                 )
-                # 在图像上绘制跟踪ID
-                # cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)
+                # 在图像上绘制跟踪ID和类别名称
                 cv2.putText(
                     frame,
                     f" {int(track_id)}  {class_name}",
@@ -172,13 +170,23 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
                     )
                     pt2 = (track_history[track_id][i][0], track_history[track_id][i][1])
                     cv2.line(frame, pt1, pt2, (0, 255, 0), 2)
+                save_data(
+                    id=track_id,
+                    class_name=class_name,
+                    x1=x1,
+                    y1=y1,
+                    x2=x2,
+                    y2=y2,
+                    img=frame,
+                    frame_count=frame_count,
+                )
             else:
                 print("class id小于0，class_id", class_id)
         # 在这里添加写入视频文件的代码
         out_video.write(frame)
         # 保存当前帧为图像文件
-        #         frame_filename = os.path.join(output_image_dir, f"frame_{frame_count:04d}.jpg")
-        #         cv2.imwrite(frame_filename, frame)
+        # frame_filename = os.path.join(output_image_dir, f"frame_{frame_count:04d}.jpg")
+        # cv2.imwrite(frame_filename, frame)
         frame_count += 1
     cap.release()
     out_video.release()
