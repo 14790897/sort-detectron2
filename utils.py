@@ -49,6 +49,14 @@ def detect_and_track(frame, cfg, sort_tracker, track_history, frame_count):
     predictor = DefaultPredictor(cfg)
 
     outputs = predictor(frame)
+    # 使用 Visualizer 绘制检测结果
+    # v = Visualizer(
+    #     frame[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2
+    # )
+    # out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
+    # # 将绘制后的图像转换回 BGR 格式并写入视频
+    # frame = out.get_image()[:, :, ::-1]
+    # frame = np.array(frame)
     boxes = outputs["instances"].pred_boxes.tensor.cpu().numpy()
     scores = outputs["instances"].scores.cpu().numpy()
     classes = outputs["instances"].pred_classes.cpu().numpy()
@@ -105,11 +113,11 @@ def detect_and_track(frame, cfg, sort_tracker, track_history, frame_count):
 def process_video(video_path, cfg, sort_tracker):
     track_history = {}  # 新增：用于存储每个track_id的历史轨迹
 
-    os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
-
-    predictor = DefaultPredictor(cfg)
     # 打开视频文件或相机
     cap = cv2.VideoCapture(video_path)
+    if not cap.isOpened():
+        print("Error opening video file")
+        return
 
     # 获取视频的宽度、高度和帧率
     frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -132,84 +140,9 @@ def process_video(video_path, cfg, sort_tracker):
         ret, frame = cap.read()
         if not ret:
             break
+        # 调用检测和跟踪逻辑
+        detect_and_track(frame, cfg, sort_tracker, track_history, frame_count)
 
-        # 使用 Detectron2 进行目标检测
-        outputs = predictor(frame)
-        # 使用 Visualizer 绘制检测结果
-        # v = Visualizer(
-        #     frame[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2
-        # )
-        # out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
-        # # 将绘制后的图像转换回 BGR 格式并写入视频
-        # frame = out.get_image()[:, :, ::-1]
-        # frame = np.array(frame)
-        # 获取检测框
-        boxes = outputs["instances"].pred_boxes.tensor.cpu().numpy()
-        scores = outputs["instances"].scores.cpu().numpy()
-        classes = outputs["instances"].pred_classes.cpu().numpy()
-        # 获取类别名称
-        class_names = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).thing_classes
-
-        # 将框、分数和类别组合成 SORT 所需的输入格式
-        detections = np.empty((0, 6))  # 包含类别信息的检测框格式
-        for box, score, class_id in zip(boxes, scores, classes):
-            detection = np.array([box[0], box[1], box[2], box[3], score, class_id])
-            detections = np.vstack((detections, detection))
-
-        # 更新 SORT 跟踪器
-        tracks = sort_tracker.update(detections)
-
-        # 绘制检测框和跟踪框
-        for track in tracks:
-            x1, y1, x2, y2 = track[:4]  # 提取边界框坐标
-            class_id = track[4]  # 提取类别 ID
-            track_id = track[8]  # 提取跟踪 ID
-            if class_id >= 0:
-                class_name = class_names[int(class_id)][0]  # 获取类别名称 首字母
-                print(
-                    "predict result:",
-                    f"Frame {frame_count}: ID {int(track_id)}, Class: {class_name}, Box [{x1}, {y1}, {x2}, {y2}]\n",
-                )
-                # 在图像上绘制跟踪ID和类别名称
-                cv2.putText(
-                    frame,
-                    f" {int(track_id)}  {class_name}",
-                    (int(x1), int(y1 - 10)),
-                    cv2.FONT_HERSHEY_SIMPLEX,
-                    0.9,
-                    (0, 0, 0),
-                    2,
-                )
-
-                # 保存当前坐标到轨迹历史中
-                track_id = int(track_id)
-                if track_id not in track_history:
-                    track_history[track_id] = []
-                track_history[track_id].append((int(x1), int(y1), int(x2), int(y2)))
-                # 绘制轨迹(之前的每一个记录点都要画)
-                for i in range(1, len(track_history[track_id])):
-                    pt1 = (
-                        track_history[track_id][i - 1][0],
-                        track_history[track_id][i - 1][1],
-                    )
-                    pt2 = (
-                        track_history[track_id][i][0],
-                        track_history[track_id][i][1],
-                    )
-                    cv2.line(frame, pt1, pt2, (0, 255, 0), 2)
-                save_data(
-                    id=track_id,
-                    class_name=class_name,
-                    x1=x1,
-                    y1=y1,
-                    x2=x2,
-                    y2=y2,
-                    img=frame,
-                    frame_count=frame_count,
-                )
-            else:
-                print("class id小于0，class_id", class_id)
-        # 写入新的视频文件
         out_video.write(frame)
         frame_count += 1
     cap.release()
@@ -217,13 +150,13 @@ def process_video(video_path, cfg, sort_tracker):
 
 
 # 处理图片集合
-def process_images(images_dir, cfg):
-    predictor = DefaultPredictor(cfg)
-    for image_path in sorted(Path(images_dir).glob("*.jpg")):  # 假设图片扩展名为.jpg
+def process_images(images_dir, cfg, sort_tracker):
+    frame_count = 0
+    track_history = {}
+    for image_path in sorted(Path(images_dir).glob("*.jpg")):
         frame = cv2.imread(str(image_path))
-        outputs = predictor(frame)
-        # 进行检测和追踪等处理...
-        print(f"处理图片：{image_path}")
+        detect_and_track(frame, cfg, sort_tracker, track_history, frame_count)
+        frame_count += 1
 
 
 # 自动检测输入类型并处理
