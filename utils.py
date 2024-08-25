@@ -42,11 +42,11 @@ def configure_detectron(data_register_training, data_register_valid):
     cfg.TEST.EVAL_PERIOD = 250
     cfg.SOLVER.CHECKPOINT_PERIOD = 250
     cfg.MODEL.DEVICE = "cpu"  # 强制使用 CPU
-    return cfg
-
-
-def detect_and_track(frame, cfg, sort_tracker, track_history, frame_count):
     predictor = DefaultPredictor(cfg)
+    return predictor, cfg
+
+
+def detect_and_track(frame, cfg, sort_tracker, track_history, frame_count, predictor):
 
     outputs = predictor(frame)
     # 使用 Visualizer 绘制检测结果
@@ -110,7 +110,7 @@ def detect_and_track(frame, cfg, sort_tracker, track_history, frame_count):
 
 
 # 处理视频文件
-def process_video(video_path, cfg, sort_tracker):
+def process_video(video_path, cfg, sort_tracker, predictor):
     track_history = {}  # 新增：用于存储每个track_id的历史轨迹
 
     # 打开视频文件或相机
@@ -132,8 +132,6 @@ def process_video(video_path, cfg, sort_tracker):
         fps,
         (frame_width, frame_height),
     )
-    output_image_dir = "result_ini"
-    os.makedirs(output_image_dir, exist_ok=True)
     frame_count = 0
 
     while cap.isOpened():  # and frame_count < 20修改这里，限制帧数为 20:
@@ -141,7 +139,9 @@ def process_video(video_path, cfg, sort_tracker):
         if not ret:
             break
         # 调用检测和跟踪逻辑
-        detect_and_track(frame, cfg, sort_tracker, track_history, frame_count)
+        detect_and_track(
+            frame, cfg, sort_tracker, track_history, frame_count, predictor
+        )
 
         out_video.write(frame)
         frame_count += 1
@@ -150,22 +150,24 @@ def process_video(video_path, cfg, sort_tracker):
 
 
 # 处理图片集合
-def process_images(images_dir, cfg, sort_tracker):
+def process_images(images_dir, cfg, sort_tracker, predictor):
     frame_count = 0
     track_history = {}
     for image_path in sorted(Path(images_dir).glob("*.jpg")):
         frame = cv2.imread(str(image_path))
-        detect_and_track(frame, cfg, sort_tracker, track_history, frame_count)
+        detect_and_track(
+            frame, cfg, sort_tracker, track_history, frame_count, predictor
+        )
         frame_count += 1
 
 
 # 自动检测输入类型并处理
-def auto_detect_and_process(input_path, cfg, sort_tracker):
+def auto_detect_and_process(input_path, cfg, sort_tracker, predictor):
     if Path(input_path).is_dir():
         print("检测到图片集合")
-        process_images(input_path, cfg, sort_tracker)
+        process_images(input_path, cfg, sort_tracker, predictor)
     elif Path(input_path).is_file() and input_path.endswith((".mp4", ".avi")):
         print("检测到视频文件")
-        process_video(input_path, cfg, sort_tracker)
+        process_video(input_path, cfg, sort_tracker, predictor)
     else:
         print("未知的输入类型，请输入一个视频文件或图片集合的目录")
