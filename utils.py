@@ -12,6 +12,7 @@ from detectron2.data.datasets import register_coco_instances
 from save_data import save_data
 from detectron2.data import DatasetCatalog, MetadataCatalog
 
+
 def configure_detectron(data_register_training, data_register_valid):
     # 配置 Detectron2
     cfg = get_cfg()
@@ -44,6 +45,62 @@ def configure_detectron(data_register_training, data_register_valid):
     return cfg
 
 
+def detect_and_track(frame, cfg, sort_tracker, track_history, frame_count):
+    predictor = DefaultPredictor(cfg)
+
+    outputs = predictor(frame)
+    boxes = outputs["instances"].pred_boxes.tensor.cpu().numpy()
+    scores = outputs["instances"].scores.cpu().numpy()
+    classes = outputs["instances"].pred_classes.cpu().numpy()
+    class_names = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).thing_classes
+
+    detections = np.empty((0, 6))
+    for box, score, class_id in zip(boxes, scores, classes):
+        detection = np.array([box[0], box[1], box[2], box[3], score, class_id])
+        detections = np.vstack((detections, detection))
+
+    tracks = sort_tracker.update(detections)
+
+    for track in tracks:
+        x1, y1, x2, y2 = track[:4]
+        class_id = track[4]
+        track_id = track[8]
+        if class_id >= 0:
+            class_name = class_names[int(class_id)][0]
+            cv2.putText(
+                frame,
+                f"{int(track_id)} {class_name}",
+                (int(x1), int(y1 - 10)),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.9,
+                (0, 0, 0),
+                2,
+            )
+
+            if track_id not in track_history:
+                track_history[track_id] = []
+            track_history[track_id].append((int(x1), int(y1), int(x2), int(y2)))
+
+            for i in range(1, len(track_history[track_id])):
+                pt1 = (
+                    track_history[track_id][i - 1][0],
+                    track_history[track_id][i - 1][1],
+                )
+                pt2 = (track_history[track_id][i][0], track_history[track_id][i][1])
+                cv2.line(frame, pt1, pt2, (0, 255, 0), 2)
+
+            save_data(
+                id=track_id,
+                class_name=class_name,
+                x1=x1,
+                y1=y1,
+                x2=x2,
+                y2=y2,
+                img=frame,
+                frame_count=frame_count,
+            )
+
+
 # 处理视频文件
 def process_video(video_path, cfg, sort_tracker):
     track_history = {}  # 新增：用于存储每个track_id的历史轨迹
@@ -52,7 +109,7 @@ def process_video(video_path, cfg, sort_tracker):
 
     predictor = DefaultPredictor(cfg)
     # 打开视频文件或相机
-    cap = cv2.VideoCapture("./output_video.mp4")
+    cap = cv2.VideoCapture(video_path)
 
     # 获取视频的宽度、高度和帧率
     frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -69,107 +126,94 @@ def process_video(video_path, cfg, sort_tracker):
     )
     output_image_dir = "result_ini"
     os.makedirs(output_image_dir, exist_ok=True)
-    with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
-        frame_count = 0
+    frame_count = 0
 
-        while cap.isOpened():  # and frame_count < 20修改这里，限制帧数为 20:
-            ret, frame = cap.read()
-            if not ret:
-                break
+    while cap.isOpened():  # and frame_count < 20修改这里，限制帧数为 20:
+        ret, frame = cap.read()
+        if not ret:
+            break
 
-            # 使用 Detectron2 进行目标检测
-            outputs = predictor(frame)
-            # 使用 Visualizer 绘制检测结果
-            # v = Visualizer(
-            #     frame[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2
-            # )
-            # out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
-            # # 将绘制后的图像转换回 BGR 格式并写入视频
-            # frame = out.get_image()[:, :, ::-1]
-            # frame = np.array(frame)
-            # 获取检测框
-            boxes = outputs["instances"].pred_boxes.tensor.cpu().numpy()
-            scores = outputs["instances"].scores.cpu().numpy()
-            classes = outputs["instances"].pred_classes.cpu().numpy()
-            # 获取类别名称
-            class_names = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).thing_classes
+        # 使用 Detectron2 进行目标检测
+        outputs = predictor(frame)
+        # 使用 Visualizer 绘制检测结果
+        # v = Visualizer(
+        #     frame[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2
+        # )
+        # out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
+        # # 将绘制后的图像转换回 BGR 格式并写入视频
+        # frame = out.get_image()[:, :, ::-1]
+        # frame = np.array(frame)
+        # 获取检测框
+        boxes = outputs["instances"].pred_boxes.tensor.cpu().numpy()
+        scores = outputs["instances"].scores.cpu().numpy()
+        classes = outputs["instances"].pred_classes.cpu().numpy()
+        # 获取类别名称
+        class_names = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).thing_classes
 
-            # 将框、分数和类别组合成 SORT 所需的输入格式
-            detections = np.empty((0, 6))  # 包含类别信息的检测框格式
-            for box, score, class_id in zip(boxes, scores, classes):
-                detection = np.array([box[0], box[1], box[2], box[3], score, class_id])
-                detections = np.vstack((detections, detection))
+        # 将框、分数和类别组合成 SORT 所需的输入格式
+        detections = np.empty((0, 6))  # 包含类别信息的检测框格式
+        for box, score, class_id in zip(boxes, scores, classes):
+            detection = np.array([box[0], box[1], box[2], box[3], score, class_id])
+            detections = np.vstack((detections, detection))
 
-            # 更新 SORT 跟踪器
-            tracks = sort_tracker.update(detections)
+        # 更新 SORT 跟踪器
+        tracks = sort_tracker.update(detections)
 
-            # 绘制检测框和跟踪框
-            for track in tracks:
-                x1, y1, x2, y2 = track[:4]  # 提取边界框坐标
-                class_id = track[4]  # 提取类别 ID
-                track_id = track[8]  # 提取跟踪 ID
-                if class_id >= 0:
-                    class_name = class_names[int(class_id)][0]  # 获取类别名称 首字母
-                    print("int(class_id):", int(class_id), "class_name:", class_name)
-                    # 将检测结果写入 result_ini.txt ，格式为：track_id class_id x y frame_count
-                    result_file.write(
-                        "%i %i %i %i %i\n"
-                        % (
-                            int(track_id),
-                            int(class_id),
-                            int((x1 + x2) / 2),
-                            int((y1 + y2) / 2),
-                            frame_count,
-                        )
+        # 绘制检测框和跟踪框
+        for track in tracks:
+            x1, y1, x2, y2 = track[:4]  # 提取边界框坐标
+            class_id = track[4]  # 提取类别 ID
+            track_id = track[8]  # 提取跟踪 ID
+            if class_id >= 0:
+                class_name = class_names[int(class_id)][0]  # 获取类别名称 首字母
+                print(
+                    "predict result:",
+                    f"Frame {frame_count}: ID {int(track_id)}, Class: {class_name}, Box [{x1}, {y1}, {x2}, {y2}]\n",
+                )
+                # 在图像上绘制跟踪ID和类别名称
+                cv2.putText(
+                    frame,
+                    f" {int(track_id)}  {class_name}",
+                    (int(x1), int(y1 - 10)),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.9,
+                    (0, 0, 0),
+                    2,
+                )
+
+                # 保存当前坐标到轨迹历史中
+                track_id = int(track_id)
+                if track_id not in track_history:
+                    track_history[track_id] = []
+                track_history[track_id].append((int(x1), int(y1), int(x2), int(y2)))
+                # 绘制轨迹(之前的每一个记录点都要画)
+                for i in range(1, len(track_history[track_id])):
+                    pt1 = (
+                        track_history[track_id][i - 1][0],
+                        track_history[track_id][i - 1][1],
                     )
-                    print(
-                        "predict result:",
-                        f"Frame {frame_count}: ID {int(track_id)}, Class: {class_name}, Box [{x1}, {y1}, {x2}, {y2}]\n",
+                    pt2 = (
+                        track_history[track_id][i][0],
+                        track_history[track_id][i][1],
                     )
-                    # 在图像上绘制跟踪ID和类别名称
-                    cv2.putText(
-                        frame,
-                        f" {int(track_id)}  {class_name}",
-                        (int(x1), int(y1 - 10)),
-                        cv2.FONT_HERSHEY_SIMPLEX,
-                        0.9,
-                        (0, 0, 0),
-                        2,
-                    )
-
-                    # 保存当前坐标到轨迹历史中
-                    track_id = int(track_id)
-                    if track_id not in track_history:
-                        track_history[track_id] = []
-                    track_history[track_id].append((int(x1), int(y1), int(x2), int(y2)))
-                    # 绘制轨迹
-                    for i in range(1, len(track_history[track_id])):
-                        pt1 = (
-                            track_history[track_id][i - 1][0],
-                            track_history[track_id][i - 1][1],
-                        )
-                        pt2 = (track_history[track_id][i][0], track_history[track_id][i][1])
-                        cv2.line(frame, pt1, pt2, (0, 255, 0), 2)
-                    save_data(
-                        id=track_id,
-                        class_name=class_name,
-                        x1=x1,
-                        y1=y1,
-                        x2=x2,
-                        y2=y2,
-                        img=frame,
-                        frame_count=frame_count,
-                    )
-                else:
-                    print("class id小于0，class_id", class_id)
-            # 在这里添加写入视频文件的代码
-            out_video.write(frame)
-            # 保存当前帧为图像文件
-            # frame_filename = os.path.join(output_image_dir, f"frame_{frame_count:04d}.jpg")
-            # cv2.imwrite(frame_filename, frame)
-            frame_count += 1
-        cap.release()
-        out_video.release()
+                    cv2.line(frame, pt1, pt2, (0, 255, 0), 2)
+                save_data(
+                    id=track_id,
+                    class_name=class_name,
+                    x1=x1,
+                    y1=y1,
+                    x2=x2,
+                    y2=y2,
+                    img=frame,
+                    frame_count=frame_count,
+                )
+            else:
+                print("class id小于0，class_id", class_id)
+        # 写入新的视频文件
+        out_video.write(frame)
+        frame_count += 1
+    cap.release()
+    out_video.release()
 
 
 # 处理图片集合
@@ -183,12 +227,12 @@ def process_images(images_dir, cfg):
 
 
 # 自动检测输入类型并处理
-def auto_detect_and_process(input_path, cfg):
+def auto_detect_and_process(input_path, cfg, sort_tracker):
     if Path(input_path).is_dir():
         print("检测到图片集合")
-        process_images(input_path, cfg)
+        process_images(input_path, cfg, sort_tracker)
     elif Path(input_path).is_file() and input_path.endswith((".mp4", ".avi")):
         print("检测到视频文件")
-        process_video(input_path, cfg)
+        process_video(input_path, cfg, sort_tracker)
     else:
         print("未知的输入类型，请输入一个视频文件或图片集合的目录")
