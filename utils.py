@@ -84,6 +84,11 @@ def detect_and_track(frame, cfg, sort_tracker, track_history, frame_count, predi
                 (0, 0, 0),
                 2,
             )
+            track_id = int(track_id)
+            print(
+                "predict result:",
+                f"Frame {frame_count}: ID {track_id}, Class: {class_name}, Box [{x1}, {y1}, {x2}, {y2}]\n",
+            )
 
             if track_id not in track_history:
                 track_history[track_id] = []
@@ -150,22 +155,50 @@ def process_video(video_path, cfg, sort_tracker, predictor):
 
 
 # 处理图片集合
-def process_images(images_dir, cfg, sort_tracker, predictor):
+def process_images_to_video(images_dir, cfg, sort_tracker, predictor):
     frame_count = 0
     track_history = {}
-    for image_path in sorted(Path(images_dir).glob("*.jpg")):
+
+    # 获取图片路径列表并检查非空
+    image_paths = list(sorted(Path(images_dir).glob("*.jpg")))
+    if not image_paths:
+        print("未找到图片")
+        return
+
+    # 读取第一张图片来确定视频尺寸
+    first_frame = cv2.imread(str(image_paths[0]))
+    if first_frame is None:
+        print("无法读取第一张图片")
+        return
+    frame_height, frame_width = first_frame.shape[:2]
+
+    # 设定输出视频的参数
+    fps = 12  # 每秒12帧
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # 使用mp4v编码
+
+    # 创建VideoWriter对象
+    out_video = cv2.VideoWriter('output_video.mp4', fourcc, fps, (frame_width, frame_height))
+
+    # 处理每张图片并写入视频
+    for image_path in image_paths:
         frame = cv2.imread(str(image_path))
-        detect_and_track(
-            frame, cfg, sort_tracker, track_history, frame_count, predictor
-        )
+        if frame is None:
+            print(f"警告: 无法读取 {image_path}，跳过此图片")
+            continue
+        detect_and_track(frame, cfg, sort_tracker, track_history, frame_count, predictor)
+        
+        out_video.write(frame)  # 写入帧到视频
         frame_count += 1
 
+    # 释放VideoWriter资源
+    out_video.release()
+    print("视频处理完成，保存至 output_video.mp4")
 
 # 自动检测输入类型并处理
 def auto_detect_and_process(input_path, cfg, sort_tracker, predictor):
     if Path(input_path).is_dir():
         print("检测到图片集合")
-        process_images(input_path, cfg, sort_tracker, predictor)
+        process_images_to_video(input_path, cfg, sort_tracker, predictor)
     elif Path(input_path).is_file() and input_path.endswith((".mp4", ".avi")):
         print("检测到视频文件")
         process_video(input_path, cfg, sort_tracker, predictor)
