@@ -177,7 +177,7 @@ def process_images_to_video(images_dir, cfg, sort_tracker, predictor):
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # 使用mp4v编码
 
     # 创建VideoWriter对象
-    out_video = cv2.VideoWriter('output_video.mp4', fourcc, fps, (frame_width, frame_height))
+    out_video = cv2.VideoWriter('output_video_from_img.mp4', fourcc, fps, (frame_width, frame_height))
 
     # 处理每张图片并写入视频
     for image_path in image_paths:
