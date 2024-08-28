@@ -174,10 +174,12 @@ def process_images_to_video(images_dir, cfg, sort_tracker, predictor):
 
     # 设定输出视频的参数
     fps = 12  # 每秒12帧
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # 使用mp4v编码
+    fourcc = cv2.VideoWriter_fourcc(*"mp4v")  # 使用mp4v编码
 
     # 创建VideoWriter对象
-    out_video = cv2.VideoWriter('output_video_from_img.mp4', fourcc, fps, (frame_width, frame_height))
+    out_video = cv2.VideoWriter(
+        "output_video_from_img.mp4", fourcc, fps, (frame_width, frame_height)
+    )
 
     # 处理每张图片并写入视频
     for image_path in image_paths:
@@ -185,14 +187,17 @@ def process_images_to_video(images_dir, cfg, sort_tracker, predictor):
         if frame is None:
             print(f"警告: 无法读取 {image_path}，跳过此图片")
             continue
-        detect_and_track(frame, cfg, sort_tracker, track_history, frame_count, predictor)
-        
+        detect_and_track(
+            frame, cfg, sort_tracker, track_history, frame_count, predictor
+        )
+
         out_video.write(frame)  # 写入帧到视频
         frame_count += 1
 
     # 释放VideoWriter资源
     out_video.release()
     print("视频处理完成，保存至 output_video.mp4")
+
 
 # 自动检测输入类型并处理
 def auto_detect_and_process(input_path, cfg, sort_tracker, predictor):
