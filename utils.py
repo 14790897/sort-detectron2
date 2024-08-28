@@ -200,6 +200,7 @@ def process_images_to_video(images_dir, cfg, sort_tracker, predictor):
 
 
 # 自动检测输入类型并处理
+# 合成视频使用的图片是画完这一帧上所有的方框之后再进行写入，而保存到结果文件夹的图片是画完了那一个ID的框之后就保存
 def auto_detect_and_process(input_path, cfg, sort_tracker, predictor):
     if Path(input_path).is_dir():
         print("检测到图片集合")
