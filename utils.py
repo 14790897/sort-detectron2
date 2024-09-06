@@ -93,13 +93,17 @@ def detect_and_track(frame, cfg, sort_tracker, track_history, frame_count, predi
             if track_id not in track_history:
                 track_history[track_id] = []
             track_history[track_id].append((int(x1), int(y1), int(x2), int(y2)))
-
+            offset = 3
             for i in range(1, len(track_history[track_id])):
                 pt1 = (
                     track_history[track_id][i - 1][0],
-                    track_history[track_id][i - 1][1],
+                    track_history[track_id][i - 1][1] - offset,
                 )
-                pt2 = (track_history[track_id][i][0], track_history[track_id][i][1])
+                pt2 = (
+                    track_history[track_id][i][0],
+                    track_history[track_id][i][1] - offset,
+                )
+
                 cv2.line(frame, pt1, pt2, (0, 255, 0), 2)
 
             save_data(

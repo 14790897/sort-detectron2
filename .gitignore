@@ -2,6 +2,8 @@
 # coco-data
 result_ini.txt
 *.avi
-model_final.pth
+*.mp4
+*.pth
 initial_result
 images*
+!input_video.mp4
