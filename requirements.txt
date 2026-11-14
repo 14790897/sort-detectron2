@@ -1,3 +1,9 @@
 filterpy
 scikit-image
 lap
+opencv-python
+numpy
+# torch
+torchvision
+torchaudio
+git+https://github.com/facebookresearch/detectron2.git

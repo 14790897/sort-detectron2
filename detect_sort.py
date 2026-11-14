@@ -1,4 +1,5 @@
-import cv2,os
+import time
+import cv2, os
 import torch
 import detectron2
 from detectron2 import model_zoo
@@ -55,7 +56,11 @@ with open(os.path.join(output_image_dir, "result_ini.txt"), "w") as result_file:
             break
 
         # 使用 Detectron2 进行目标检测
+        start_time = time.time()
         outputs = predictor(frame)
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        print(f"目标检测耗时: {elapsed_time:.4f} 秒")
         # 使用 Visualizer 绘制检测结果
         # v = Visualizer(
         #     frame[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2

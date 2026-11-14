@@ -11,6 +11,7 @@ from detectron2.data import MetadataCatalog
 from detectron2.data.datasets import register_coco_instances
 from save_data import save_data
 from detectron2.data import DatasetCatalog, MetadataCatalog
+import time
 
 
 def configure_detectron(data_register_training, data_register_valid):
@@ -41,14 +42,17 @@ def configure_detectron(data_register_training, data_register_valid):
     cfg.SOLVER.STEPS = (500, 1000)  # At which point to change the LR 0.25,0.5
     cfg.TEST.EVAL_PERIOD = 250
     cfg.SOLVER.CHECKPOINT_PERIOD = 250
-    cfg.MODEL.DEVICE = "cpu"  # 强制使用 CPU
+    cfg.MODEL.DEVICE = "cuda:0"  # 强制使用 CPU
     predictor = DefaultPredictor(cfg)
     return predictor, cfg
 
 
 def detect_and_track(frame, cfg, sort_tracker, track_history, frame_count, predictor):
-
+    start_time = time.time()
     outputs = predictor(frame)
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"目标检测耗时: {elapsed_time:.4f} 秒")
     # 使用 Visualizer 绘制检测结果
     # v = Visualizer(
     #     frame[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2
